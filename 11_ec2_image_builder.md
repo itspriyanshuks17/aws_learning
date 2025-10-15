@@ -52,8 +52,6 @@ It eliminates the need for manual image creation, ensuring that your AMIs are **
 ## 🧭 EC2 Image Builder Workflow Diagram
 
 ```
-
-```
   +-------------------------+
   |    Source Base Image    |
   | (Amazon Linux, Ubuntu)  |
@@ -90,7 +88,7 @@ It eliminates the need for manual image creation, ensuring that your AMIs are **
     +----------------------+
 ```
 
-````
+![EBS Architecture](images/ec2_image_builder.png)
 
 ---
 
