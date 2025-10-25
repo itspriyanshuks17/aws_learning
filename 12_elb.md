@@ -165,5 +165,3 @@ aws elbv2 create-listener \
 
 ✅ **In Summary:**
 AWS ELB provides **high availability, fault tolerance, and both horizontal & vertical scalability**, enabling applications to handle variable traffic, survive failures, and remain performant across multiple AZs.
-
-```
