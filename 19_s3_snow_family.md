@@ -78,25 +78,25 @@ Enterprises moving entire data centers or archives (like banks, media studios, o
 
 ```
 
-┌──────────────────────────────┐
-│    On-premises environment   │
-└──────────────┬───────────────┘
-│
-▼
-+------------------+
-| AWS Snow Device  |
-| (Snowcone,       |
-|  Snowball, etc.) |
-+------------------+
-│
-▼
-Shipped back to AWS Data Center
-│
-▼
-+------------------+
-|   AWS Import     |
-| (into Amazon S3) |
-+------------------+
+                ┌──────────────────────────────┐
+                │    On-premises environment   │
+                └───────────┬──────────────────┘
+                            │
+                            ▼
+                    +------------------+
+                    | AWS Snow Device  |
+                    | (Snowcone,       |
+                    |  Snowball, etc.) |
+                    +------------------+
+                            │
+                            ▼
+                Shipped back to AWS Data Center
+                            │
+                            ▼
+                    +------------------+
+                    |   AWS Import     |
+                    | (into Amazon S3) |
+                    +------------------+
 
 ````
 
