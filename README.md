@@ -127,6 +127,60 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - Machine Learning Insights (Anomaly Detection)
   - Row-Level Security (RLS)
 
+- **[29. Amazon Neptune Deep Dive](29_neptune.md)**
+
+  - Graph Database fundamentals (Nodes, Edges)
+  - Gremlin vs SPARQL Query Languages
+  - Use cases: Social Networks, Fraud Detection
+
+- **[30. Amazon Timestream Deep Dive](30_timestream.md)**
+
+  - Time Series Database architecture
+  - Storage Tiering: Memory Store vs Magnetic Store
+  - Use cases: IoT and DevOps monitoring
+
+- **[31. Amazon QLDB Deep Dive](31_qldb.md)**
+
+  - Immutable Transaction Log (The Journal)
+  - Cryptographically Verifiable
+  - QLDB vs Managed Blockchain comparison
+
+- **[32. Amazon Managed Blockchain Deep Dive](32_managed_blockchain.md)**
+
+  - Hyperledger Fabric vs Ethereum
+  - Decentralized Trust & Consensus
+  - Architecture: Members, Peers, and Ordering Service
+
+- **[33. AWS Glue Deep Dive](33_glue.md)**
+
+  - Serverless ETL (Extract, Transform, Load)
+  - Data Catalog & Crawlers (Schema Discovery)
+  - Workflow: Source -> Crawler -> Catalog -> Job -> Target
+
+- **[34. AWS DMS Deep Dive](34_dms.md)**
+  - Homogenous vs Heterogenous Migrations
+  - Schema Conversion Tool (SCT) necessity
+  - Continuous Replication (CDC)
+
+### 📦 Container Services
+
+- **[35. Docker Fundamentals for AWS](35_docker.md)**
+
+  - Virtual Machines vs Containers
+  - Dockerfile, Image, and Container concepts
+  - Amazon ECR (Elastic Container Registry) basics
+
+- **[36. Amazon ECS Deep Dive](36_ecs.md)**
+
+  - Fargate vs EC2 Launch Types
+  - Clusters, Services, and Task Definitions
+  - Auto Scaling and Load Balancer integration
+
+- **[37. AWS Fargate Deep Dive](37_fargate.md)**
+  - Serverless Compute for Containers
+  - Task Isolation and Security (VM-level)
+  - Fargate vs EC2 Launch Type pricing
+
 ## 🎯 Structured Learning Path
 
 ### Phase 1: Foundation (Week 1-2)
