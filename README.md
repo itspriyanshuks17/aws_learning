@@ -177,9 +177,28 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - Auto Scaling and Load Balancer integration
 
 - **[37. AWS Fargate Deep Dive](37_fargate.md)**
+
   - Serverless Compute for Containers
   - Task Isolation and Security (VM-level)
   - Fargate vs EC2 Launch Type pricing
+
+- **[38. Amazon ECR Deep Dive](38_ecr.md)**
+
+  - Public vs Private Repositories
+  - Security Scanning (Basic vs Enhanced)
+  - Lifecycle Policies (Cost Optimization)
+
+- **[39. Amazon EKS Deep Dive](39_eks.md)**
+  - Managed Kubernetes Service
+  - Control Plane vs Data Plane (Nodes)
+  - EKS Distro & EKS Anywhere
+
+### Serverless Services
+
+- **[40. AWS Lambda Deep Dive](40_lambda.md)**
+  - Serverless Compute Basics
+  - Triggers (API Gateway, S3, DynamoDB)
+  - Execution Limits and Pricing
 
 ## 🎯 Structured Learning Path
 
