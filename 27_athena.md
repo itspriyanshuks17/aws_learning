@@ -1,6 +1,6 @@
 # 🔍 Amazon Athena - Deep Dive
 
-Amazon Athena is ***an interactive query service*** that makes it ***easy to analyze data in Amazon S3 using standard SQL***. Athena is ***serverless***, so there is ***no infrastructure to manage***, and you ***pay only for the queries that you run***.
+Amazon Athena is **_an interactive query service_** that makes it **_easy to analyze data in Amazon S3 using standard SQL_**. Athena is **_serverless_**, so there is **_no infrastructure to manage_**, and you **_pay only for the queries that you run_**.
 
 ## 📋 Table of Contents
 
@@ -14,7 +14,7 @@ Amazon Athena is ***an interactive query service*** that makes it ***easy to ana
 
 ## 1. Architecture Overview
 
-Athena is _built on open-source_ **Presto** (a **distributed SQL engine**) and *handles the complexity of creating, configuring, and scaling* the compute fleet.
+Athena is _built on open-source_ **Presto** (a **distributed SQL engine**) and _handles the complexity of creating, configuring, and scaling_ the compute fleet.
 
 ![Athena Architecture](./images/athena.png)
 
@@ -73,8 +73,8 @@ Organize data in S3 using folders structure like `s3://bucket/data/year=2023/mon
 
 ### Optimization Comparison
 
-| Strategy                         | Data Scanned | Cost  | Speed     |
-| :------------------------------- | :----------- | :---- | :-------- |
+| Strategy                   | Data Scanned | Cost  | Speed     |
+| :------------------------- | :----------- | :---- | :-------- |
 | **CSV (Full Scan)**        | 1 TB         | $5.00 | Slow      |
 | **Parquet (Columnar)**     | 100 GB       | $0.50 | Fast      |
 | **Parquet + Partitioning** | 10 GB        | $0.05 | Very Fast |
@@ -102,7 +102,7 @@ Query data stored in data sources **other than S3** (like DynamoDB, RDS, Redshif
                                             v
                                      +------+-------+
                                      |  DynamoDB    |
-                                     | (User Pofiles)|
+                                     |(User Pofiles)|
                                      +--------------+
 ```
 
