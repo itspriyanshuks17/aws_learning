@@ -196,9 +196,27 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
 ### Serverless Services
 
 - **[40. AWS Lambda Deep Dive](40_lambda.md)**
+
   - Serverless Compute Basics
   - Triggers (API Gateway, S3, DynamoDB)
   - Execution Limits and Pricing
+
+- **[41. AWS API Gateway Deep Dive](41_api_gateway.md)**
+
+  - REST vs HTTP vs WebSocket APIs
+  - Endpoint Types (Edge, Regional, Private)
+  - Security (Cognito, IAM, Lambda Authorizer)
+
+- **[42. AWS Batch Deep Dive](42_batch.md)**
+
+  - Batch Computing (Jobs, Queues, Environments)
+  - Orchestrating Spot Instances
+  - Batch vs Lambda for long-running jobs
+
+- **[43. Amazon Lightsail Deep Dive](43_lightsail.md)**
+  - Virtual Private Server (VPS) made easy
+  - Fixed Monthly Pricing vs EC2
+  - One-Click Apps (WordPress, LAMP)
 
 ## 🎯 Structured Learning Path
 
