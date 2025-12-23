@@ -47,9 +47,9 @@ graph LR
 
 ## 2. Deployment Types
 
-| Type                 | Description                                                                                                                         | Pros/Cons                                                                                                                        |
-| :------------------- | :---------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
-| **In-Place**   | Stops the application on each instance, installs the new version, and restarts.                                                     | **Pros**: fast, cheap (no new instances). **Cons**: Downtime (capacity reduced during deploy).                       |
+| Type           | Description                                                                                                                   | Pros/Cons                                                                                                            |
+| :------------- | :---------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------- |
+| **In-Place**   | Stops the application on each instance, installs the new version, and restarts.                                               | **Pros**: fast, cheap (no new instances). **Cons**: Downtime (capacity reduced during deploy).                       |
 | **Blue/Green** | Provisions a**new** set of instances (Green), installs version, waits for health checks, then switches Load Balancer traffic. | **Pros**: No downtime, easy rollback (just switch traffic back). **Cons**: Cost (double instances for a short time). |
 
 ---

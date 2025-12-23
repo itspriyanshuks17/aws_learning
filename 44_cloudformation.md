@@ -29,7 +29,7 @@ AWS CloudFormation is an **Infrastructure as Code (IaC)** service. It allows you
 
 ```mermaid
 graph LR
-    User[Developer] -->|Write Code| Template(YAML/JSON)
+    User[Developer] -->|Write Code| Template[YAML/JSON]
     Template -->|Upload| S3[Amazon S3]
     S3 -->|Create Stack| CFN[CloudFormation]
     CFN -->|Calls API| EC2[Amazon EC2]

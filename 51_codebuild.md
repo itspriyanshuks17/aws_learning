@@ -24,8 +24,13 @@ CodeBuild acts as the **Build** stage. It takes source code/artifacts from S3, b
 
 ```mermaid
 graph LR
-    S3[S3 Source Artifact] -->|Input| CB[CodeBuild]
-    CB -->|Output| Art[S3 Build Artifact / ECR Image]
+    subgraph Source
+        S3[S3 Source Artifact] -->|Input| CB[CodeBuild]
+    end
+    subgraph Build
+        CB -->|Compiles| Art[S3 Build Artifact]
+        CB -->|Builds| ECR[ECR Image]
+    end
 ```
 
 ![1766512034195](image/51_codebuild/1766512034195.png)

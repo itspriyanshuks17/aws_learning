@@ -35,22 +35,22 @@ The **3-Tier Architecture** is the **industry standard** for **deploying secure,
 
 ```mermaid
 graph TD
-    User((User)) -->|HTTPS| IGW["Internet Gateway"]
-    IGW --> ALB["Application Load Balancer"]
+    User((User)) -->|HTTPS| IGW[Internet Gateway]
+    IGW --> ALB[Application Load Balancer]
 
     subgraph VPC
         subgraph "Public Subnet (Web Tier)"
             ALB
-            NAT["NAT Gateway"]
+            NAT[NAT Gateway]
         end
 
         subgraph "Private Subnet (App Tier)"
-            EC2_App["App Server (EC2/ASG)"]
+            EC2_App[App Server (EC2/ASG)]
             EC2_App -->|Outbound traffic| NAT
         end
 
         subgraph "Private Subnet (Data Tier)"
-            DB[("RDS Database")]
+            DB[(RDS Database)]
         end
     end
 
@@ -64,11 +64,11 @@ graph TD
 
 Security is maintained by chaining **Security Groups (SG)**.
 
-| Component        | Inbound Rule                                                  | Outbound Rule                                     |
-| :--------------- | :------------------------------------------------------------ | :------------------------------------------------ |
+| Component  | Inbound Rule                                            | Outbound Rule                               |
+| :--------- | :------------------------------------------------------ | :------------------------------------------ |
 | **ALB SG** | Allow HTTP/HTTPS (80/443) from**0.0.0.0/0** (Anywhere). | Allow Traffic to**App SG**.                 |
-| **App SG** | Allow HTTP (8080)**ONLY** from **ALB SG**.        | Allow Traffic to**DB SG** + Internet (NAT). |
-| **DB SG**  | Allow SQL (3306/5432)**ONLY** from **App SG**.    | Deny All (or specific for updates).               |
+| **App SG** | Allow HTTP (8080)**ONLY** from **ALB SG**.              | Allow Traffic to**DB SG** + Internet (NAT). |
+| **DB SG**  | Allow SQL (3306/5432)**ONLY** from **App SG**.          | Deny All (or specific for updates).         |
 
 **Key Takeaway**: The Database SG never allows "0.0.0.0/0" and never allows the "ALB SG". It only trusts the "App SG".
 

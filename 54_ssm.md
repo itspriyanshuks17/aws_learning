@@ -26,9 +26,9 @@ The Agent uses a **Pull** model. It polls the SSM Backend to ask "Do you have an
 
 ```mermaid
 graph LR
-    SSM["SSM Service"] -- "Commands" --> Agent["SSM Agent on EC2"]
-    Agent -- "Polls (Outbound 443)" --> SSM
-    Agent -- "Results" --> SSM
+    SSM[SSM Service] -->|Commands| Agent[SSM Agent on EC2]
+    Agent -->|"Polls (Outbound 443)"| SSM
+    Agent -->|Results| SSM
 ```
 
 ## 2. Session Manager (Goodbye SSH)
@@ -51,9 +51,9 @@ Session Manager is the **modern, secure way to connect to instances**.
 
 ```mermaid
 graph LR
-    User["IAM User"] -->|Auth| SSM["Systems Manager"]
-    SSM <-->|"Websocket/TLS"| Agent["EC2 Instance"]
-    Agent -->|Logs| S3["S3 Bucket"]
+    User[IAM User] -->|Auth| SSM[Systems Manager]
+    SSM <-->|Websocket/TLS| Agent[EC2 Instance]
+    Agent -->|Logs| S3[S3 Bucket]
 ```
 
 ---

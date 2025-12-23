@@ -50,12 +50,12 @@ CDK is essentially a **CloudFormation Generator**.
 
 ```mermaid
 graph LR
-    Code["TypeScript Code"] -->|cdk synth| CFT["CloudFormation Template"]
-    CFT -->|cdk deploy| AWS["AWS CloudFormation"]
-    AWS -->|Provision| Res["Resources (S3, EC2)"]
+    Code[TypeScript Code] -->|cdk synth| CFT[CloudFormation Template]
+    CFT -->|cdk deploy| AWS[AWS CloudFormation]
+    AWS -->|Provision| Res[Resources (S3, EC2)]
 ```
-![CDK Workflow](images/cdk.png)
----
+
+## ![CDK Workflow](images/cdk.png)
 
 ## 3. Constructs (L1, L2, L3)
 
