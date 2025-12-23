@@ -219,6 +219,12 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - Fixed Monthly Pricing vs EC2
   - One-Click Apps (WordPress, LAMP)
 
+- **[48. AWS Elastic Beanstalk Deep Dive](48_elastic_beanstalk.md)**
+
+  - Platform as a Service (PaaS)
+  - Deployment Policies (Rolling, Immutable)
+  - Extensions (`.ebextensions`) and Configuration
+
   - One-Click Apps (WordPress, LAMP)
 
 ### Management & Developer Tools
@@ -230,9 +236,45 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - Drift Detection (Syncing Manual Changes)
 
 - **[45. AWS CDK Deep Dive](45_cdk.md)**
+
   - Cloud Development Kit (TypeScript/Python)
   - Constructs (L1, L2, L3 Patterns)
   - Workflow: Code -> `cdk synth` -> CloudFormation
+
+- **[49. AWS CodeDeploy Deep Dive](49_codedeploy.md)**
+
+  - Deployment Types (In-Place vs Blue/Green)
+  - Application Lifecycle Hooks (`appspec.yml`)
+  - Troubleshooting Deployments
+
+- **[50. AWS CodeCommit Deep Dive](50_codecommit.md)**
+
+  - Private Git Repositories
+  - Authentication (HTTPS Git Credentials vs SSH)
+  - Cross-Account Access with IAM Roles
+
+- **[51. AWS CodeBuild Deep Dive](51_codebuild.md)**
+
+  - Fully Managed Build Service (CI)
+  - `buildspec.yml` Configuration
+  - Artifacts & Caching (S3/Local)
+
+- **[52. AWS CodePipeline Deep Dive](52_codepipeline.md)**
+
+  - CI/CD Orchestration (Source -> Build -> Deploy)
+  - Artifact Transmission via S3
+  - Manual Approvals
+
+- **[53. AWS CodeArtifact Deep Dive](53_codeartifact.md)**
+
+  - Managed Artifactory (npm, pip, maven)
+  - Domains vs Repositories (De-duplication)
+  - Upstream Caching (Proxy for public repos)
+
+- **[54. AWS Systems Manager (SSM) Deep Dive](54_ssm.md)**
+  - SSM Session Manager (No Ports/SSH)
+  - Parameter Store (Secrets/Config)
+  - Run Command & Patch Manager
 
 ### Architecture Patterns
 
