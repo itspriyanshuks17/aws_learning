@@ -214,9 +214,40 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - Batch vs Lambda for long-running jobs
 
 - **[43. Amazon Lightsail Deep Dive](43_lightsail.md)**
+
   - Virtual Private Server (VPS) made easy
   - Fixed Monthly Pricing vs EC2
   - One-Click Apps (WordPress, LAMP)
+
+  - One-Click Apps (WordPress, LAMP)
+
+### Management & Developer Tools
+
+- **[44. AWS CloudFormation Deep Dive](44_cloudformation.md)**
+
+  - Infrastructure as Code (IaC)
+  - Stacks, Change Sets, and Intrinsic Functions
+  - Drift Detection (Syncing Manual Changes)
+
+- **[45. AWS CDK Deep Dive](45_cdk.md)**
+  - Cloud Development Kit (TypeScript/Python)
+  - Constructs (L1, L2, L3 Patterns)
+  - Workflow: Code -> `cdk synth` -> CloudFormation
+
+### Architecture Patterns
+
+- **[46. AWS 3-Tier Web Architecture](46_architecture_3tier.md)**
+  - Web, App, and Data Layers
+  - Security Groups Chaining
+  - High Availability with Multi-AZ
+
+### Developer Guides
+
+- **[47. Common Developer Problems (Troubleshooting)](47_developer_problems.md)**
+  - EC2 Connection Issues (SSH/HTTP)
+  - S3 403 Errors & Lambda Timeouts
+  - CloudFormation Rollbacks, CodeDeploy Hooks, & 502/504 Errors
+  - Database Connections & ASG Thrashing
 
 ## 🎯 Structured Learning Path
 
