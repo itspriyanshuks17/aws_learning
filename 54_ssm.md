@@ -24,11 +24,12 @@ To manage an EC2 instance with SSM, three things are required:
 
 The Agent uses a **Pull** model. It polls the SSM Backend to ask "Do you have any commands for me?". This is why you **do not** need to open Inbound Ports.
 
-```mermaid
-graph LR
-    SSM[SSM Service] -->|Commands| Agent[SSM Agent on EC2]
-    Agent -->|"Polls (Outbound 443)"| SSM
-    Agent -->|Results| SSM
+```text
+[ SSM Service ] --(Commands)--> [ SSM Agent on EC2 ]
+      ^                                  |
+      |                        (Polls Outbound 443)
+      |                                  |
+      +-------------(Results)------------+
 ```
 
 ## 2. Session Manager (Goodbye SSH)
@@ -49,11 +50,8 @@ Session Manager is the **modern, secure way to connect to instances**.
 3. SSM Agent on EC2 establishes a bi-directional websocket channel with SSM Service.
 4. User gets a shell.
 
-```mermaid
-graph LR
-    User[IAM User] -->|Auth| SSM[Systems Manager]
-    SSM <-->|Websocket/TLS| Agent[EC2 Instance]
-    Agent -->|Logs| S3[S3 Bucket]
+```text
+[ IAM User ] --(Auth)--> [ Systems Manager ] <--(Websocket/TLS)--> [ EC2 Instance ] --(Logs)--> [ S3 Bucket ]
 ```
 
 ---

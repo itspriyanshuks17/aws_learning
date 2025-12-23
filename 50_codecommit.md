@@ -23,10 +23,8 @@ AWS CodeCommit is a **private, secure, and scalable source control service** tha
 
 CodeCommit acts as the **Source** stage in your release pipeline.
 
-```mermaid
-graph LR
-    Dev[Developer] -->|Git Push| CC[CodeCommit]
-    CC -->|Triggers| Pipeline[AWS CodePipeline]
+```text
+[ Developer ] --(Git Push)--> [ CodeCommit ] --(Triggers)--> [ AWS CodePipeline ]
 ```
 
 ---

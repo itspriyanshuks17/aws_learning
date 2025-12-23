@@ -33,29 +33,26 @@ The **3-Tier Architecture** is the **industry standard** for **deploying secure,
 
 ## 2. Architecture Diagram
 
-```mermaid
-graph TD
-    User((User)) -->|HTTPS| IGW[Internet Gateway]
-    IGW --> ALB[Application Load Balancer]
-
-    subgraph VPC
-        subgraph "Public Subnet (Web Tier)"
-            ALB
-            NAT[NAT Gateway]
-        end
-
-        subgraph "Private Subnet (App Tier)"
-            EC2_App[App Server (EC2/ASG)]
-            EC2_App -->|Outbound traffic| NAT
-        end
-
-        subgraph "Private Subnet (Data Tier)"
-            DB[(RDS Database)]
-        end
-    end
-
-    ALB -->|Forward Request| EC2_App
-    EC2_App -->|SQL Query| DB
+```text
+[ User ] --(HTTPS)--> [ Internet Gateway ] --> [ Application Load Balancer ]
+                                                         |
+         +-----------------------------------------------+-----------------------------------------------+
+         | VPC                                                                                           |
+         |                                                                                               |
+         |  Public Subnet (Web Tier):                                                                    |
+         |      [ Application Load Balancer ] -----------+              [ NAT Gateway ]                  |
+         |                                               |                     ^                         |
+         |                                         (Forward Request)           |                         |
+         |                                               |                     |                         |
+         |                                               v                     |                         |
+         |  Private Subnet (App Tier):              [ App Server (EC2) ] --(Outbound Traffic)------------+
+         |                                               |                                               |
+         |                                           (SQL Query)                                         |
+         |                                               |                                               |
+         |                                               v                                               |
+         |  Private Subnet (Data Tier):             [ RDS Database ]                                     |
+         |                                                                                               |
+         +-----------------------------------------------------------------------------------------------+
 ```
 
 ---

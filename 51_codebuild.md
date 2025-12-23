@@ -22,15 +22,13 @@ AWS CodeBuild is a **fully managed continuous integration (CI) service** that co
 
 CodeBuild acts as the **Build** stage. It takes source code/artifacts from S3, builds them, and pushes the result back to S3 (or ECR).
 
-```mermaid
-graph LR
-    subgraph Source
-        S3[S3 Source Artifact] -->|Input| CB[CodeBuild]
-    end
-    subgraph Build
-        CB -->|Compiles| Art[S3 Build Artifact]
-        CB -->|Builds| ECR[ECR Image]
-    end
+```text
+Source:
+[ S3 Source Artifact ] --(Input)--> [ CodeBuild ]
+
+Build:
+[ CodeBuild ] --(Compiles)--> [ S3 Build Artifact ]
+              --(Builds)-->   [ ECR Image ]
 ```
 
 ![1766512034195](image/51_codebuild/1766512034195.png)

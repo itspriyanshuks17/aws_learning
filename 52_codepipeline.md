@@ -39,22 +39,15 @@ A typical CI/CD pipeline looks like this:
    - _Input_: `BuildArtifact`.
    - _Output_: Application running on servers.
 
-```mermaid
-graph LR
-    subgraph Source
-        Dev[Developer] -->|Push| CC[CodeCommit]
-        CC -->|Trigger| PL[CodePipeline]
-    end
+```text
+Source:
+[ Developer ] --(Push)--> [ CodeCommit ] --(Trigger)--> [ CodePipeline ]
 
-    subgraph Build
-        PL -->|Downloads Source| CB[CodeBuild]
-        CB -->|Compiles/Tests| Art[Build Artifact]
-    end
+Build:
+[ CodePipeline ] --(Downloads Source)--> [ CodeBuild ] --(Compiles/Tests)--> [ Build Artifact ]
 
-    subgraph Deploy
-        Art -->|Input| CD[CodeDeploy]
-        CD -->|Updates| EC2[EC2 Instances]
-    end
+Deploy:
+[ Build Artifact ] --(Input)--> [ CodeDeploy ] --(Updates)--> [ EC2 Instances ]
 ```
 
 ## 3. Artifacts (Input/Output)

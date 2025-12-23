@@ -58,12 +58,12 @@ This is a critical feature ("Caching Proxy").
 
 **Benefit**: If npmjs.com goes down, your build still works because you have a cached copy.
 
-```mermaid
-graph LR
-    Dev[Developer] -->|npm install| CA[CodeArtifact Repo]
-    CA -->|Request| Public[npm Public Registry]
-    Public -->|Return Package| CA
-    CA -->|Cache & Return| Dev
+```text
+[ Developer ] --(npm install)--> [ CodeArtifact Repo ] --(Request)--> [ npm Public Registry ]
+      ^                                     |                                   |
+      |                                     |                             (Return Package)
+      |                                     v                                   |
+      +-------------(Cache & Return)--------+-----------------------------------+
 ```
 
 ---

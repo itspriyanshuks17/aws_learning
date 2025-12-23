@@ -27,13 +27,20 @@ AWS CloudFormation is an **Infrastructure as Code (IaC)** service. It allows you
 3. **CloudFormation**: **Checks** the template **for syntax errors** and **dependencies**.
 4. **Provision**: CloudFormation **calls the API of each service** (EC2, RDS) to **create resources** in the **correct order**.
 
-```mermaid
-graph LR
-    User[Developer] -->|Write Code| Template[YAML/JSON]
-    Template -->|Upload| S3[Amazon S3]
-    S3 -->|Create Stack| CFN[CloudFormation]
-    CFN -->|Calls API| EC2[Amazon EC2]
-    CFN -->|Calls API| RDS[Amazon RDS]
+```text
+[ Developer ] --(Write Code)--> [ Template (YAML/JSON) ] --(Upload)--> [ Amazon S3 ]
+                                                                             |
+                                                                       (Create Stack)
+                                                                             |
+                                                                             v
+                                                                     [ CloudFormation ]
+                                                                             |
+                                                      +----------------------+----------------------+
+                                                      |                                             |
+                                                 (Calls API)                                   (Calls API)
+                                                      |                                             |
+                                                      v                                             v
+                                                [ Amazon EC2 ]                                [ Amazon RDS ]
 ```
 
 ---

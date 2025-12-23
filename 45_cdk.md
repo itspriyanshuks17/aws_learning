@@ -48,11 +48,13 @@ CDK is essentially a **CloudFormation Generator**.
 3. **Synth (Synthesize)**: `cdk synth`. This converts your code into a **CloudFormation Template (YAML)**.
 4. **Deploy**: `cdk deploy`. This captures the YAML and calls the CloudFormation `CreateStack` API.
 
-```mermaid
-graph LR
-    Code[TypeScript Code] -->|cdk synth| CFT[CloudFormation Template]
-    CFT -->|cdk deploy| AWS[AWS CloudFormation]
-    AWS -->|Provision| Res[Resources (S3, EC2)]
+```text
+[ TypeScript Code ] --(cdk synth)--> [ CloudFormation Template ] --(cdk deploy)--> [ AWS CloudFormation ]
+                                                                                         |
+                                                                                     (Provision)
+                                                                                         |
+                                                                                         v
+                                                                               [ Resources (S3, EC2) ]
 ```
 
 ## ![CDK Workflow](images/cdk.png)

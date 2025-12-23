@@ -34,13 +34,23 @@ AWS CodeDeploy is a **fully managed deployment service** that **automates softwa
 4. **Pull**: The Agent pulls the Revision (Code + AppSpec) from S3/GitHub.
 5. **Hooks**: The Agent executes the lifecycle hooks (Stop, Install, Start, Validate) defined in `appspec.yml`.
 
-```mermaid
-graph LR
-    Dev[Developer] -->|Push| Repo[GitHub / S3]
-    Repo -->|Trigger| CD[CodeDeploy Service]
-    CD -->|Polls| Agent[CodeDeploy Agent]
-    Agent -->|Pull| Repo
-    Agent -->|Execute| Hooks[Lifecycle Hooks]
+```text
+[ Developer ] --(Push)--> [ GitHub / S3 ] --(Trigger)--> [ CodeDeploy Service ]
+                                                                |
+                                                             (Polls)
+                                                                |
+                                                                v
+                                                       [ CodeDeploy Agent ]
+                                                                |
+                                                              (Pull)
+                                                                |
+                                                                v
+                                                        [ GitHub / S3 ]
+                                                                |
+                                                            (Execute)
+                                                                |
+                                                                v
+                                                       [ Lifecycle Hooks ]
 ```
 
 ---
