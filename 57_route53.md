@@ -30,6 +30,9 @@ Amazon Route 53 is a highly available and scalable **cloud Domain Name System (D
 - **AAAA**: Maps hostname to **IPv6**.
 - **CNAME**: Maps hostname to **another hostname** (e.g., `m.example.com` -> `mobile.example.com`).
   - _Limit_: Cannot create CNAME for the Root Domain (Apex) like `example.com`.
+- **MX (Mail Exchange)**: Routes **email** for a domain to mail servers.
+  - _Structure_: Priority + Hostname (e.g., `10 mail.google.com`).
+  - _Use Case_: Configures G Suite, Office 365, or SES (Simple Email Service).
 - **Alias**: AWS Specific. Maps hostname to **AWS Resource** (ALB, CloudFront, S3).
   - _Benefit_: Works for Root Domain (`example.com`). Free of charge. Dynamic (updates automatically if ALB IP changes).
 
