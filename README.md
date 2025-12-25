@@ -278,6 +278,11 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
 
 ### Global Infrastructure & Networking
 
+- **[56. AWS Global Infrastructure Deep Dive](56_global_infrastructure.md)**
+  - Regions vs Availability Zones (AZs)
+  - Edge Locations & Points of Presence
+  - Local Zones, Wavelength, and Outposts
+
 - **[55. AWS Global Application Architecture](55_global_application.md)**
   - Route 53 (DNS Routing Policies)
   - CloudFront vs Global Accelerator
