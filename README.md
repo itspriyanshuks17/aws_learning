@@ -276,6 +276,13 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - Parameter Store (Secrets/Config)
   - Run Command & Patch Manager
 
+### Global Infrastructure & Networking
+
+- **[55. AWS Global Application Architecture](55_global_application.md)**
+  - Route 53 (DNS Routing Policies)
+  - CloudFront vs Global Accelerator
+  - S3 Cross-Region Replication
+
 ### Architecture Patterns
 
 - **[46. AWS 3-Tier Web Architecture](46_architecture_3tier.md)**
