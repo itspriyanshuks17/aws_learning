@@ -278,7 +278,14 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
 
 ### Global Infrastructure & Networking
 
+- **[57. Amazon Route 53 Deep Dive](57_route53.md)**
+
+  - Routing Policies (Weighted, Latency, Failover)
+  - Hosted Zones (Public vs Private)
+  - Alias vs CNAME Records
+
 - **[56. AWS Global Infrastructure Deep Dive](56_global_infrastructure.md)**
+
   - Regions vs Availability Zones (AZs)
   - Edge Locations & Points of Presence
   - Local Zones, Wavelength, and Outposts
