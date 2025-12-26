@@ -144,7 +144,37 @@ Run code at the edge to modify requests/responses.
 
 ---
 
-## 6. Exam Cheat Sheet
+## 6. Comparisons & S3 Transfer Acceleration
+
+### CloudFront vs S3 Cross-Region Replication (CRR)
+
+| Feature            | CloudFront (CDN)                                 | S3 Cross-Region Replication (CRR)                            |
+| :----------------- | :----------------------------------------------- | :----------------------------------------------------------- |
+| **Purpose**        | **Cache** content closing to users globally.     | **Replicate** entire data for DR or Compliance.              |
+| **Data Freshness** | Cached for **TTL** (can be stale for hours/day). | Updated in **near real-time**.                               |
+| **Content Type**   | Great for **Static Content** (Images/Video).     | Great for **Dynamic Content** at low latency in few regions. |
+| **Updates**        | Read-Only at Edge.                               | Read-Only at destination.                                    |
+| **Location**       | **400+ Edge Locations** (Everywhere).            | Specific **Target Regions** (e.g., US -> Sydney).            |
+
+### S3 Transfer Acceleration
+
+How do you upload a large file (10GB) from Australia to a bucket in the USA quickly?
+Instead of using the slow public internet, you upload to the **closest Edge Location**, and it travels over the **AWS fast private network**.
+
+- **Speed**: Increases transfer speed by 50-500%.
+- **Cost**: Additional cost for acceleration.
+- **Test**: Use the [Speed Comparison Tool](https://s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-comparsion.html).
+
+```text
+                  [ Fast Private AWS Network ]
+                /                              \
+[ User in ] --> [ Edge Location ] -------------> [ S3 Bucket ]
+[ Australia]    [ (Australia) ]                  [  (USA)    ]
+```
+
+---
+
+## 7. Exam Cheat Sheet
 
 - **S3 Security**: "Prevent users from accessing S3 directly" -> **OAC (Origin Access Control)**.
 - **Private Content**: "Serve paid video content to premium members" -> **Signed URLs** (1 file) or **Signed Cookies** (many files).
