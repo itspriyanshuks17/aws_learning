@@ -22,22 +22,20 @@ Amazon CloudFront is a fast **Content Delivery Network (CDN)** service that secu
 ### Workflow
 
 ```text
-[ User ] --(Get /image.jpg)--> [ Edge Location (Closest to User) ]
-                                          |
-                                     (Check Cache)
-                                          |
-                        +--(Miss)---------+---------(Hit)--+
-                        |                                  |
-                        v                                  |
-               [ Origin Server ]                           |
-             (S3 / EC2 / ALB)                              |
-                        |                                  |
-                 (Return File)                             |
-                        |                                  |
-                        +-------->(Save to Cache)--------->+
-                                                           |
-                                                           v
-                                                      [ User gets File ]
+      [ Client ]
+          |
+(GET /beach.jpg?size=300x300)
+(Host: www.example.com)
+(User-Agent: Mozilla/4.0...)
+          |
+          v
+ [ CloudFront Edge Location ] <--(Local Cache)--
+          |
+          +---(Cache Miss?)---> [ Forward Request ]
+                                       |
+                                       v
+                                [ Origin Server ]
+                                (S3 or HTTP/EC2)
 ```
 
 ---

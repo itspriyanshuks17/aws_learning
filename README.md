@@ -278,6 +278,12 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
 
 ### Global Infrastructure & Networking
 
+- **[58. Amazon CloudFront Deep Dive](58_cloudfront.md)**
+
+  - Caching Strategies (TTL, Invalidations)
+  - Security (OAI/OAC, Signed URLs)
+  - CloudFront Functions vs Lambda@Edge
+
 - **[57. Amazon Route 53 Deep Dive](57_route53.md)**
 
   - Routing Policies (Weighted, Latency, Failover)
