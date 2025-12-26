@@ -1,11 +1,11 @@
-# 🚦 Amazon Route 53 - Deep Dive
+![1766682006586](image/57_route53/1766682006586.png)# 🚦 Amazon Route 53 - Deep Dive
 
 Amazon Route 53 is a highly available and scalable **cloud Domain Name System (DNS) web service**. It translates human readable names (`google.com`) into numeric IP addresses (`192.0.2.1`).
 
 ## 📋 Table of Contents
 
 1. [Core Concepts](#1-core-concepts)
-2. [Records & TTL](#2-records--ttl)
+2. [Records &amp; TTL](#2-records--ttl)
 3. [Routing Policies (The Heart of Route 53)](#3-routing-policies-the-heart-of-route-53)
 4. [Health Checks](#4-health-checks)
 5. [Hosted Zones (Public vs Private)](#5-hosted-zones-public-vs-private)
@@ -20,6 +20,7 @@ Amazon Route 53 is a highly available and scalable **cloud Domain Name System (D
 - **Highly Available**: SLA of **100% availability** (The only AWS service with 100%).
 - **Authoritative DNS**: Route 53 has the final say on where your domain points.
 
+![1766682015276](image/57_route53/1766682015276.png)
 ---
 
 ## 2. Records & TTL
@@ -58,6 +59,8 @@ Route 53 doesn't just return an IP; it decides _which_ IP to return based on log
 [ User ] --(Query)--> [ Route 53 ] --(A Record)--> [ 10.0.0.1 ]
 ```
 
+![1766682086985](image/57_route53/1766682086985.png)
+
 ### 2. Weighted Routing
 
 - **Use Case**: Canary testing, Blue/Green deployment, split traffic.
@@ -69,6 +72,7 @@ Route 53 doesn't just return an IP; it decides _which_ IP to return based on log
                      \--(20%)--> [ V2 (New) ]
 ```
 
+![1766682109970](image/57_route53/1766682109970.png)
 ### 3. Latency Routing
 
 - **Use Case**: Global users strictly needing best performance.
@@ -78,6 +82,8 @@ Route 53 doesn't just return an IP; it decides _which_ IP to return based on log
 [ User in Japan ] --> [ Route 53 ] --> [ Tokyo Region ] (10ms)
                                   \--> [ US-East Region ] (150ms)
 ```
+
+![1766682141468](image/57_route53/1766682141468.png)
 
 ### 4. Failover Routing (Active-Passive)
 
@@ -92,6 +98,8 @@ Route 53 doesn't just return an IP; it decides _which_ IP to return based on log
      v
 [ Secondary (DR Site) ]
 ```
+
+![1766682169141](image/57_route53/1766682169141.png)
 
 ### 5. Geolocation Routing
 
@@ -114,9 +122,9 @@ Route 53 doesn't just return an IP; it decides _which_ IP to return based on log
 
 Route 53 Health Checks monitor endpoints (often public IPs) or CloudWatch Alarms.
 
-1.  **Monitor an Endpoint**: Checks HTTP/HTTPS/TCP.
-2.  **Calculated**: Combine multiple checks (AND/OR).
-3.  **CloudWatch Alarm**: Check internal metrics (e.g., DynamoDB throttles).
+1. **Monitor an Endpoint**: Checks HTTP/HTTPS/TCP.
+2. **Calculated**: Combine multiple checks (AND/OR).
+3. **CloudWatch Alarm**: Check internal metrics (e.g., DynamoDB throttles).
 
 - **Integration**: Health Checks are **required** for Failover Routing.
 
