@@ -50,6 +50,22 @@ Origins are where CloudFront goes if it doesn't have the file.
 2.  **Custom Origin**: HTTP Server (EC2, ALB, On-prem).
 3.  **Origin Group**: High Availability. If Primary Origin fails, failover to Secondary Origin.
 
+#### CloudFront with S3 Origin (S3 as an Origin)
+
+When S3 is your origin, you typically want to restrict access so users can only view content via CloudFront (using OAC), not directly via the S3 URL.
+
+```text
+       [ User ]
+          |
+    (GET /logo.png) (HTTPS)
+          |
+          v
+ [ CloudFront Distribution ] --(Signed Request w/ OAC)--> [ S3 Bucket (Private) ]
+                                                            ^
+  (Direct Access Blocked)                                   |
+           X------------------------------------------------+
+```
+
 ### Behaviors
 
 Behaviors allow you to route different URL paths to different origins.
