@@ -1,13 +1,13 @@
 # ⚡ Amazon CloudFront - Deep Dive
 
-Amazon CloudFront is a fast **Content Delivery Network (CDN)** service that securely delivers data, videos, applications, and APIs to customers globally with low latency, high transfer speeds, within a developer-friendly environment.
+Amazon CloudFront is a fast **Content Delivery Network (CDN)** service that **securely delivers data, videos, applications, and APIs to customers globally** with **low latency, high transfer speeds, within a developer-friendly environment.**
 
 ## 📋 Table of Contents
 
 1. [Core Concepts](#1-core-concepts)
-2. [Origins & Behaviors](#2-origins--behaviors)
-3. [Caching & Invalidations](#3-caching--invalidations)
-4. [Security (OAI/OAC & WAF)](#4-security-oaioac--waf)
+2. [Origins &amp; Behaviors](#2-origins--behaviors)
+3. [Caching &amp; Invalidations](#3-caching--invalidations)
+4. [Security (OAI/OAC &amp; WAF)](#4-security-oaioac--waf)
 5. [Advanced Features (Functions vs Lambda@Edge)](#5-advanced-features-functions-vs-lambdaedge)
 6. [Exam Cheat Sheet](#6-exam-cheat-sheet)
 
@@ -15,7 +15,7 @@ Amazon CloudFront is a fast **Content Delivery Network (CDN)** service that secu
 
 ## 1. Core Concepts
 
-- **Edge Location**: A location where content is cached (distinct from an AWS Region). There are 400+ Edge Locations globally.
+- **Edge Location**: A **location** where **content is cached** (distinct from an AWS Region). There are 400+ Edge Locations globally.
 - **Origin**: The source of your files (S3, EC2, ALB, or on-premise server).
 - **Distribution**: The CloudFront configuration (contains the domain name `d1234.cloudfront.net`).
 
@@ -38,17 +38,15 @@ Amazon CloudFront is a fast **Content Delivery Network (CDN)** service that secu
                                 (S3 or HTTP/EC2)
 ```
 
----
-
 ## 2. Origins & Behaviors
 
 ### Origins
 
 Origins are where CloudFront goes if it doesn't have the file.
 
-1.  **S3 Bucket**: For distributing static files (images, CSS, JS).
-2.  **Custom Origin**: HTTP Server (EC2, ALB, On-prem).
-3.  **Origin Group**: High Availability. If Primary Origin fails, failover to Secondary Origin.
+1. **S3 Bucket**: For distributing static files (images, CSS, JS).
+2. **Custom Origin**: HTTP Server (EC2, ALB, On-prem).
+3. **Origin Group**: High Availability. If Primary Origin fails, failover to Secondary Origin.
 
 #### CloudFront with S3 Origin (S3 as an Origin)
 
@@ -66,6 +64,8 @@ When S3 is your origin, you typically want to restrict access so users can only 
            X------------------------------------------------+
 ```
 
+![1766820104340](image/58_cloudfront/1766820104340.png)
+
 ### Behaviors
 
 Behaviors allow you to route different URL paths to different origins.
@@ -82,8 +82,8 @@ Behaviors allow you to route different URL paths to different origins.
 
 How long does an item stay at the edge?
 
-1.  **Cache-Control Header**: Set by the origin (e.g., `max-age=3600`).
-2.  **CloudFront Default TTL**: Used if origin doesn't send headers.
+1. **Cache-Control Header**: Set by the origin (e.g., `max-age=3600`).
+2. **CloudFront Default TTL**: Used if origin doesn't send headers.
 
 ### Cache Key
 
@@ -135,8 +135,8 @@ Encrypts sensitive data (like Credit Card #) at the Edge, so only your backend a
 
 Run code at the edge to modify requests/responses.
 
-| Feature      | CloudFront Functions                               | Lambda@Edge                                   |
-| :----------- | :------------------------------------------------- | :-------------------------------------------- |
+| Feature            | CloudFront Functions                               | Lambda@Edge                                   |
+| :----------------- | :------------------------------------------------- | :-------------------------------------------- |
 | **Language** | JavaScript (ECMAScript 5.1).                       | Node.js / Python.                             |
 | **Runtime**  | Sub-millisecond. High scale.                       | Up to 5-10 seconds.                           |
 | **Use Case** | Header manipulation, URL rewrites, JWT validation. | Complex logic, Network calls to external DBs. |
@@ -148,17 +148,18 @@ Run code at the edge to modify requests/responses.
 
 ### CloudFront vs S3 Cross-Region Replication (CRR)
 
-| Feature            | CloudFront (CDN)                                 | S3 Cross-Region Replication (CRR)                            |
-| :----------------- | :----------------------------------------------- | :----------------------------------------------------------- |
-| **Purpose**        | **Cache** content closing to users globally.     | **Replicate** entire data for DR or Compliance.              |
-| **Data Freshness** | Cached for **TTL** (can be stale for hours/day). | Updated in **near real-time**.                               |
-| **Content Type**   | Great for **Static Content** (Images/Video).     | Great for **Dynamic Content** at low latency in few regions. |
-| **Updates**        | Read-Only at Edge.                               | Read-Only at destination.                                    |
-| **Location**       | **400+ Edge Locations** (Everywhere).            | Specific **Target Regions** (e.g., US -> Sydney).            |
+| Feature                  | CloudFront (CDN)                                      | S3 Cross-Region Replication (CRR)                                 |
+| :----------------------- | :---------------------------------------------------- | :---------------------------------------------------------------- |
+| **Purpose**        | **Cache** content closing to users globally.    | **Replicate** entire data for DR or Compliance.             |
+| **Data Freshness** | Cached for**TTL** (can be stale for hours/day). | Updated in**near real-time**.                               |
+| **Content Type**   | Great for**Static Content** (Images/Video).     | Great for**Dynamic Content** at low latency in few regions. |
+| **Updates**        | Read-Only at Edge.                                    | Read-Only at destination.                                         |
+| **Location**       | **400+ Edge Locations** (Everywhere).           | Specific**Target Regions** (e.g., US -> Sydney).            |
 
 ### S3 Transfer Acceleration
 
-How do you upload a large file (10GB) from Australia to a bucket in the USA quickly?
+#### How do you upload a large file (10GB) from Australia to a bucket in the USA quickly?
+
 Instead of using the slow public internet, you upload to the **closest Edge Location**, and it travels over the **AWS fast private network**.
 
 - **Speed**: Increases transfer speed by 50-500%.
@@ -173,6 +174,8 @@ Instead of using the slow public internet, you upload to the **closest Edge Loca
 ```
 
 ---
+
+![1766820147172](image/58_cloudfront/1766820147172.png)
 
 ## 7. Exam Cheat Sheet
 
