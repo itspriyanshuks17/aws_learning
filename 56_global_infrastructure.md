@@ -7,7 +7,7 @@ Understanding the **AWS Global Infrastructure** is the first step in architectin
 1. [Regions](#1-regions)
 2. [Availability Zones (AZs)](#2-availability-zones-azs)
 3. [Edge Locations (Points of Presence)](#3-edge-locations-points-of-presence)
-4. [GovCloud & China Regions](#4-govcloud--china-regions)
+4. [GovCloud &amp; China Regions](#4-govcloud--china-regions)
 5. [Exam Cheat Sheet](#5-exam-cheat-sheet)
 
 ---
@@ -22,10 +22,10 @@ A **Region** is a **physical location** in the world where AWS clusters data cen
 
 ### How to choose a Region?
 
-1.  **Compliance**: Legal requirements (e.g., "Data must live in Germany").
-2.  **Proximity**: Latency to your users (Users in India -> Use Mumbai Region).
-3.  **Services**: Not all services are available in all regions (e.g., Bedrock might be in us-east-1 first).
-4.  **Cost**: Resources cost different amounts in different regions (e.g., Brazil is often more expensive than US).
+1. **Compliance**: Legal requirements (e.g., "Data must live in Germany").
+2. **Proximity**: Latency to your users (Users in India -> Use Mumbai Region).
+3. **Services**: Not all services are available in all regions (e.g., Bedrock might be in us-east-1 first).
+4. **Cost**: Resources cost different amounts in different regions (e.g., Brazil is often more expensive than US).
 
 ---
 
@@ -91,12 +91,12 @@ These are data centers **separate** from Regions/AZs, configured specifically to
 
 Special regions with strict access controls.
 
-1.  **US GovCloud**:
-    - For customers capable of hosting **controlled unclassified information**.
-    - Operated by US Citizens only.
-2.  **AWS China**:
-    - Operated by local partners (Sinnet in Beijing, NWCD in Ningxia) to comply with Chinese regulations.
-    - AWS Accounts are totally separate (Global AWS ID does not work here).
+1. **US GovCloud**:
+   - For customers capable of hosting **controlled unclassified information**.
+   - Operated by US Citizens only.
+2. **AWS China**:
+   - Operated by local partners (Sinnet in Beijing, NWCD in Ningxia) to comply with Chinese regulations.
+   - AWS Accounts are totally separate (Global AWS ID does not work here).
 
 ---
 
