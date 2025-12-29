@@ -61,11 +61,22 @@ If AZ A goes down (power outage), AZ B and AZ C continue working. Your applicati
 These are data centers **separate** from Regions/AZs, configured specifically to deliver content **fast** to users.
 
 - **Count**: 400+ globally (much more than Regions).
-- **Services**: Used by **CloudFront** (CDN) and **Route 53** (DNS).
-- **Regional Edge Caches**: Large caches that sit between standard Edge Locations and Origin servers.
+- **Services**: Used by **CloudFront** (CDN), **Route 53** (DNS), **Shield** (DDoS Protection), and **WAF** (Firewall).
+
+### 1. Edge Locations vs Regional Edge Caches
+
+- **Edge Locations**: The "front door" closest to users. Caches popular content.
+- **Regional Edge Caches**: Sit between Edge Locations and the Origin. Larger cache width. Used when content falls out of the Edge Local cache.
 
 ```text
-[ User ] --(Request)--> [ Edge Location ] --(Cache Miss)--> [ Region (Origin) ]
+[ User ]
+   |
+   v
+[ Edge Location (400+) ] --(Miss)--> [ Regional Edge Cache ] --(Miss)--> [ Region (Origin) ]
+   |                                          |                                   |
+(Return Cached) <-----------------------------+                                   |
+   ^                                                                              |
+   +------------------------------------------------------------------------------+
 ```
 
 ### Other Local Infrastructure
