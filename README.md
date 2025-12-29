@@ -278,6 +278,12 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
 
 ### Global Infrastructure & Networking
 
+- **[59. AWS Global Accelerator Deep Dive](59_global_accelerator.md)**
+
+  - Unicast vs Anycast IP
+  - Traffic Dials & Endpoint Weighting
+  - Client IP Preservation
+
 - **[58. Amazon CloudFront Deep Dive](58_cloudfront.md)**
 
   - Caching Strategies (TTL, Invalidations)
