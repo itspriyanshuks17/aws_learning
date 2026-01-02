@@ -278,6 +278,12 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
 
 ### Global Infrastructure & Networking
 
+- **[60. AWS Outposts Deep Dive](60_outposts.md)**
+
+  - Hybrid Cloud (On-Premises Extension)
+  - Racks vs Servers
+  - Local Gateway & Connectivity
+
 - **[59. AWS Global Accelerator Deep Dive](59_global_accelerator.md)**
 
   - Unicast vs Anycast IP
