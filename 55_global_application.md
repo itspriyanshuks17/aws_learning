@@ -8,8 +8,9 @@ Building a **Global Application** means serving users around the world with **lo
 2. [Amazon CloudFront (CDN)](#2-amazon-cloudfront-cdn)
 3. [AWS Global Accelerator](#3-aws-global-accelerator)
 4. [S3 Cross-Region Replication (CRR)](#4-s3-cross-region-replication-crr)
-5. [Comparison: CloudFront vs Global Accelerator](#5-comparison-cloudfront-vs-global-accelerator)
-6. [Exam Cheat Sheet](#6-exam-cheat-sheet)
+5. [Global Deployment Architectures](#5-global-deployment-architectures)
+6. [Comparison: CloudFront vs Global Accelerator](#6-comparison-cloudfront-vs-global-accelerator)
+7. [Exam Cheat Sheet](#7-exam-cheat-sheet)
 
 ---
 
@@ -92,7 +93,66 @@ For disaster recovery or compliance, you can duplicate data across regions.
 
 ---
 
-## 5. Comparison: CloudFront vs Global Accelerator
+---
+
+## 5. Global Deployment Architectures
+
+When building global applications, you must balance **Availability**, **Latency**, and **Complexity**.
+
+### A. Single Region, Single AZ
+
+- **Concept**: App running on one EC2 instance in one AZ.
+- **Pros**: Easiest to set up.
+- **Cons**: **High Latency** for global users, **Low Availability** (if AZ fails, app fails).
+- **Difficulty**: Low.
+
+```text
+[ Global User ] --(High Latency)--> [ Region A (AZ 1) ]
+```
+
+### B. Single Region, Multi AZ
+
+- **Concept**: App running in multiple AZs behind an ALB.
+- **Pros**: **High Availability** (survives AZ failure).
+- **Cons**: Still **High Latency** for global users.
+- **Difficulty**: Medium.
+
+```text
+                                     /-> [ AZ 1 (Instance) ]
+[ Global User ] --(High Latency)--> [ ALB ]
+                                     \-> [ AZ 2 (Instance) ]
+```
+
+### C. Multi-Region, Active-Passive
+
+- **Concept**: Primary Region (Active) handles writes. Secondary Region (Passive) is for read-scalability or Disaster Recovery.
+- **Reads**: Can be **Global** (Low Latency) using Read Replicas.
+- **Writes**: Must go to Active Region (**High Latency** for distant users).
+- **Difficulty**: High (Data Replication lag).
+
+```text
+[ User A ] --(Read)--> [ Region B (Passive) ]
+     |
+  (Write)
+     |
+     v
+[ Region A (Active) ] --(Async Replication)--> [ Region B (Passive) ]
+```
+
+### D. Multi-Region, Active-Active
+
+- **Concept**: All regions handle Reads and Writes (e.g., DynamoDB Global Tables).
+- **Pros**: **Lowest Latency** for both Reads and Writes (users connect to nearest region).
+- **Cons**: **Very Complex** conflict resolution usage.
+- **Difficulty**: Very High.
+
+```text
+[ User A ] --(Read/Write)--> [ Region A (Active) ] <--> [ Region B (Active) ] <--(Read/Write)-- [ User B ]
+```
+
+---
+
+## 6. Comparison: CloudFront vs Global Accelerator
 
 | Feature          | CloudFront (CDN)                            | Global Accelerator                              |
 | :--------------- | :------------------------------------------ | :---------------------------------------------- |
@@ -103,7 +163,7 @@ For disaster recovery or compliance, you can duplicate data across regions.
 
 ---
 
-## 6. Exam Cheat Sheet
+## 7. Exam Cheat Sheet
 
 - **Static IP**: "Need a fixed IP for a global application" -> **Global Accelerator** (Anycast IP).
 - **Caching**: "Reduce latency for static assets (images/css)" -> **CloudFront**.
