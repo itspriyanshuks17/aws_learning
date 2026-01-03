@@ -1,11 +1,11 @@
 # 📡 AWS Wavelength - Deep Dive
 
-AWS Wavelength extends AWS infrastructure to the **edge of 5G networks**, embedding AWS compute and storage inside telecommunication providers' data centers.
+AWS Wavelength extends AWS infrastructure to the **edge of 5G networks**, embedding AWS **compute and storage inside telecommunication** providers' data centers.
 
 ## 📋 Table of Contents
 
 1. [Core Concepts](#1-core-concepts)
-2. [Architecture & Traffic Flow](#2-architecture--traffic-flow)
+2. [Architecture &amp; Traffic Flow](#2-architecture--traffic-flow)
 3. [Use Cases](#3-use-cases)
 4. [Wavelength Zone vs Local Zone vs Outposts](#4-wavelength-zone-vs-local-zone-vs-outposts)
 5. [Exam Cheat Sheet](#5-exam-cheat-sheet)
@@ -47,24 +47,22 @@ With Wavelength, traffic goes:
 +-------------------------+
 ```
 
----
-
 ## 3. Use Cases
 
-1.  **Industrial Automation**: Smart factories using 5G robots.
-2.  **Autonomous Vehicles**: Real-time logic for self-driving cars.
-3.  **AR/VR**: Rendering high-fidelity graphics for mobile VR headsets.
-4.  **Live Video Streaming**: Real-time video analytics at the edge.
+1. **Industrial Automation**: Smart factories using 5G robots.
+2. **Autonomous Vehicles**: Real-time logic for self-driving cars.
+3. **AR/VR**: Rendering high-fidelity graphics for mobile VR headsets.
+4. **Live Video Streaming**: Real-time video analytics at the edge.
 
 ---
 
 ## 4. Wavelength Zone vs Local Zone vs Outposts
 
-| Feature          | Wavelength Zone                          | Local Zone                            | Outposts                         |
-| :--------------- | :--------------------------------------- | :------------------------------------ | :------------------------------- |
-| **Location**     | Inside **5G Carrier** DC (Verizon, etc.) | Specific **City** (LA, Houston, etc.) | **Your** On-Premise Data Center. |
-| **Connectivity** | 5G Network.                              | AWS Backbone / Internet.              | Your Local Network.              |
-| **Use Case**     | **Mobile** Ultra-Low Latency.            | **General** Ultra-Low Latency.        | **Private** Data Residency.      |
+| Feature                | Wavelength Zone                               | Local Zone                                 | Outposts                               |
+| :--------------------- | :-------------------------------------------- | :----------------------------------------- | :------------------------------------- |
+| **Location**     | Inside**5G Carrier** DC (Verizon, etc.) | Specific**City** (LA, Houston, etc.) | **Your** On-Premise Data Center. |
+| **Connectivity** | 5G Network.                                   | AWS Backbone / Internet.                   | Your Local Network.                    |
+| **Use Case**     | **Mobile** Ultra-Low Latency.           | **General** Ultra-Low Latency.       | **Private** Data Residency.      |
 
 ---
 
