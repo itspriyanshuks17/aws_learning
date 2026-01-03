@@ -403,7 +403,7 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
 
 ### Global Infrastructure & Networking
 
-- [61. AWS Wavelength Deep Dive](61_wavelength.md)\*\*
+- **[61. AWS Wavelength Deep Dive](61_wavelength.md)**
 
   - **Definition**: An infrastructure offering optimized for mobile edge computing applications.
   - **Use Case**: Deploying ultra-low latency applications to 5G devices (e.g., AR/VR).
