@@ -403,6 +403,11 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
 
 ### Global Infrastructure & Networking
 
+- **[62. AWS Local Zones Deep Dive](62_local_zones.md)**
+
+  - **Definition**: An infrastructure deployment that places compute and storage closer to large population and industry centers.
+  - **Use Case**: Running latency-sensitive applications like video rendering or gaming in a specific city.
+
 - **[61. AWS Wavelength Deep Dive](61_wavelength.md)**
 
   - **Definition**: An infrastructure offering optimized for mobile edge computing applications.
