@@ -1,6 +1,6 @@
 # ⛓️ Amazon Managed Blockchain - Deep Dive
 
-Amazon Managed Blockchain is a ***fully managed service* **that makes it easy ***to create and manage scalable blockchain networks*** using popular ***open-source frameworks***.
+Amazon Managed Blockchain is a ***fully managed service*** that makes it easy ***to create and manage scalable blockchain networks*** using popular ***open-source frameworks***.
 
 ## 📋 Table of Contents
 
