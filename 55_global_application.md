@@ -110,6 +110,8 @@ When building global applications, you must balance **Availability**, **Latency*
 [ Global User ] --(High Latency)--> [ Region A (AZ 1) ]
 ```
 
+![1767439404236](image/55_global_application/1767439404236.png)
+
 ### B. Single Region, Multi AZ
 
 - **Concept**: App running in multiple AZs behind an ALB.
@@ -122,6 +124,7 @@ When building global applications, you must balance **Availability**, **Latency*
 [ Global User ] --(High Latency)--> [ ALB ]
                                      \-> [ AZ 2 (Instance) ]
 ```
+![1767439432881](image/55_global_application/1767439432881.png)
 
 ### C. Multi-Region, Active-Passive
 
@@ -139,6 +142,10 @@ When building global applications, you must balance **Availability**, **Latency*
 [ Region A (Active) ] --(Async Replication)--> [ Region B (Passive) ]
 ```
 
+
+![1767439458882](image/55_global_application/1767439458882.png)
+
+
 ### D. Multi-Region, Active-Active
 
 - **Concept**: All regions handle Reads and Writes (e.g., DynamoDB Global Tables).
@@ -149,6 +156,7 @@ When building global applications, you must balance **Availability**, **Latency*
 ```text
 [ User A ] --(Read/Write)--> [ Region A (Active) ] <--> [ Region B (Active) ] <--(Read/Write)-- [ User B ]
 ```
+![1767439483136](image/55_global_application/1767439483136.png)
 
 ---
 

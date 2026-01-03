@@ -58,11 +58,11 @@ With Wavelength, traffic goes:
 
 ## 4. Wavelength Zone vs Local Zone vs Outposts
 
-| Feature                | Wavelength Zone                               | Local Zone                                 | Outposts                               |
-| :--------------------- | :-------------------------------------------- | :----------------------------------------- | :------------------------------------- |
-| **Location**     | Inside**5G Carrier** DC (Verizon, etc.) | Specific**City** (LA, Houston, etc.) | **Your** On-Premise Data Center. |
-| **Connectivity** | 5G Network.                                   | AWS Backbone / Internet.                   | Your Local Network.                    |
-| **Use Case**     | **Mobile** Ultra-Low Latency.           | **General** Ultra-Low Latency.       | **Private** Data Residency.      |
+| Feature          | Wavelength Zone                          | Local Zone                            | Outposts                         |
+| :--------------- | :--------------------------------------- | :------------------------------------ | :------------------------------- |
+| **Location**     | Inside **5G Carrier** DC (Verizon, etc.) | Specific **City** (LA, Houston, etc.) | **Your** On-Premise Data Center. |
+| **Connectivity** | 5G Network.                              | AWS Backbone / Internet.              | Your Local Network.              |
+| **Use Case**     | **Mobile** Ultra-Low Latency.            | **General** Ultra-Low Latency.        | **Private** Data Residency.      |
 
 ---
 

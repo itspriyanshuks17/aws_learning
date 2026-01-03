@@ -38,7 +38,7 @@ Local Zones are connected to the parent region via AWS's private high-bandwidth 
     (Los Angeles - LAX)                        (Gamer in LA)
     (EC2 / EBS / ALB)
 ```
-
+![1767439162838](image/62_local_zones/1767439162838.png)
 ---
 
 ## 3. Use Cases
