@@ -58,6 +58,7 @@ Outposts **must** connect back to the parent AWS Region. It is NOT for disconnec
     (Running EC2, S3)           (Legacy DB, Printers)
 ```
 
+![1767341111128](image/60_outposts/1767341111128.png)
 ---
 
 ## 4. Use Cases
