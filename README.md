@@ -401,6 +401,12 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - Parameter Store (Secrets/Config)
   - Run Command & Patch Manager
 
+### 🔗 Cloud Integration
+
+- **[63. Cloud Integration & Decoupling](63_cloud_integration.md)**
+  - **Definition**: Patterns and services to decouple application components for scalability and reliability.
+  - **Use Case**: Using queues (SQS) or pub/sub (SNS) to handle traffic spikes without crashing services.
+
 ### Global Infrastructure & Networking
 
 - **[62. AWS Local Zones Deep Dive](62_local_zones.md)**
