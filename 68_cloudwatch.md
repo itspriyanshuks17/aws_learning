@@ -1,6 +1,6 @@
 # ⏲️ Amazon CloudWatch & EventBridge
 
-Amazon CloudWatch is a monitoring and observability service. It provides data and actionable insights to monitor your applications, respond to system-wide performance changes, and optimize resource utilization.
+Amazon CloudWatch is a **monitoring and observability service**. It provides **data and actionable insights to monitor** your **applications**, **respond to system-wide performance changes**, and **optimize resource utilization**.
 
 ## 📋 Table of Contents
 
@@ -48,16 +48,13 @@ Store, monitor, and access log files from EC2 instances, CloudTrail, Route 53, e
 - **Metric Filter**: Can search logs for keywords (e.g., "Error") and turn them into a Metric (e.g., `ErrorCount`).
 - **Agent**: You must install the **CloudWatch Agent** on EC2 to send OS-level logs (RAM usage, Disk space). By default, CloudWatch only sees "Hypervisor" metrics (CPU, Network, Disk I/O).
 
-![1767520253704](image/68_cloudwatch/1767520253704.png)
----
-
 ## 4. Amazon EventBridge
 
 Formerly "CloudWatch Events". Serverless event bus to connect applications.
 
-1.  **Schedule (Cron)**: Trigger a Lambda function every hour.
-2.  **Pattern Matching**: Trigger when a specific event happens (e.g., "EC2 Instance State changes to Stopped").
-    - **Target**: Lambda, SNS, SQS, Kinesis, Step Functions.
+1. **Schedule (Cron)**: Trigger a Lambda function every hour.
+2. **Pattern Matching**: Trigger when a specific event happens (e.g., "EC2 Instance State changes to Stopped").
+   - **Target**: Lambda, SNS, SQS, Kinesis, Step Functions.
 
 ```text
 [ EC2 Instance ] --(State Change)--> [ EventBridge ] --(Trigger Rule)--> [ Lambda Function ]
