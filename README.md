@@ -424,8 +424,13 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Use Case**: Sending one message to multiple subscribers (Email + SQS + Lambda) simultaneously (Fan-Out).
 
 - **[67. Amazon MQ Deep Dive](67_amazon_mq.md)**
+
   - **Definition**: Managed ActiveMQ and RabbitMQ service.
   - **Use Case**: Migrating legacy on-premise applications to the cloud without rewriting messaging code (Lift & Shift).
+
+- **[69. Amazon EventBridge Deep Dive](69_eventbridge.md)**
+  - **Definition**: A serverless event bus service for building event-driven applications (formerly CloudWatch Events).
+  - **Use Case**: Integrating SaaS applications (Zendesk, Shopify) with AWS Lambda or filtering events by content.
 
 ### Global Infrastructure & Networking
 
