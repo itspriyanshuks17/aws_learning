@@ -15,12 +15,15 @@ Amazon EventBridge is a serverless **Event Bus** service that makes it easy to c
 ## 1. Core Concepts
 
 - **Rule**: Matches incoming events and routes them to targets.
+![1767520490467](image/69_eventbridge/1767520490467.png)
 - **Target**: The service that processes the event (Lambda, SNS, SQS, Kinesis, CodePipeline).
 - **Event Pattern**: JSON structure used to filter events (e.g., `source: ["aws.ec2"]`).
 
 ```text
 [ Source (Datadog) ] --(Event)--> [ Event Bus ] --(Rule)--> [ Target (Lambda) ]
 ```
+![1767520448956](image/69_eventbridge/1767520448956.png)
+
 
 ---
 
@@ -41,6 +44,7 @@ EventBridge can analyze the events flowing through your bus and **infer the sche
 - **Code Bindings**: You can download code bindings (Java/Python/TS) for your IDE, so you get auto-completion for event objects in your code.
 - **Versioning**: Tracks changes to your event structure over time.
 
+![1767520526134](image/69_eventbridge/1767520526134.png)
 ---
 
 ## 4. EventBridge Scheduler vs CloudWatch Events
