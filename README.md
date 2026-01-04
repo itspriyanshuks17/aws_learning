@@ -491,6 +491,12 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - CloudFront vs Global Accelerator
   - S3 Cross-Region Replication
 
+### 🔍 Monitoring & Audit
+
+- **[68. Amazon CloudWatch Deep Dive](68_cloudwatch.md)**
+  - **Definition**: A monitoring and observability service for DevOps engineers, developers, and site reliability engineers (SREs).
+  - **Use Case**: Monitoring EC2 CPU usage, triggering alarms for high latency, and analyzing logs.
+
 ### Architecture Patterns
 
 - **[46. AWS 3-Tier Web Architecture](46_architecture_3tier.md)**
