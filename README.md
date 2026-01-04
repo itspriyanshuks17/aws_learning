@@ -404,8 +404,13 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
 ### 🔗 Cloud Integration
 
 - **[63. Cloud Integration & Decoupling](63_cloud_integration.md)**
+
   - **Definition**: Patterns and services to decouple application components for scalability and reliability.
   - **Use Case**: Using queues (SQS) or pub/sub (SNS) to handle traffic spikes without crashing services.
+
+- **[64. Amazon SQS Deep Dive](64_sqs.md)**
+  - **Definition**: A fully managed message queuing service for decoupling microservices.
+  - **Use Case**: Buffering requests from a web server before processing them on backend instances.
 
 ### Global Infrastructure & Networking
 
