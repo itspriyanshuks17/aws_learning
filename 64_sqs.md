@@ -28,7 +28,7 @@ Amazon SQS is a f**ully managed message queuing service** that enables you to **
 ```text
 [ Producer ] --(Msg)--> [ SQS Queue ] --(Poll)--> [ Consumer ]
 ```
-
+![1767513348258](image/64_sqs/1767513348258.png)
 ---
 
 ## 2. SQS Between Application Tiers
@@ -51,7 +51,7 @@ A common pattern is to decouple the **Web Tier** (Frontend) from the **Processin
 (Accepts Uploads Fast)       (Buffers Requests)      (Processes Slowly)
 ```
 
-## ![1767513348258](image/64_sqs/1767513348258.png)
+![1767513626017](image/64_sqs/1767513626017.png)
 
 ## 3. Standard vs FIFO Queues
 
@@ -62,6 +62,8 @@ A common pattern is to decouple the **Web Tier** (Frontend) from the **Processin
 | **Throughput** | Unlimited.                                           | Limited (3,000 msg/sec with batching).     |
 | **Name**       | Any name (e.g.,`my-queue`).                          | Must end in `.fifo` (e.g., `orders.fifo`). |
 
+
+![1767513554958](image/64_sqs/1767513554958.png)
 ---
 
 ## 4. Key Configurations
