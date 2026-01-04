@@ -414,8 +414,13 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Use Case**: Buffering requests from a web server before processing them on backend instances.
 
 - **[65. Amazon Kinesis Deep Dive](65_kinesis.md)**
+
   - **Definition**: A service for real-time processing of streaming large data.
   - **Use Case**: Ingesting clickstream logs or IoT telemetry for real-time dashboards (using Firehose or Analytics).
+
+- **[66. Amazon SNS Deep Dive](66_sns.md)**
+  - **Definition**: A fully managed Pub/Sub messaging service (Push Notifications).
+  - **Use Case**: Sending one message to multiple subscribers (Email + SQS + Lambda) simultaneously (Fan-Out).
 
 ### Global Infrastructure & Networking
 
