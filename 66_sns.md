@@ -58,6 +58,7 @@ One of the most popular patterns in AWS (and exam!).
 [ Buying Service ] --> [ SNS Topic ] --<
                                         \--> [ SQS Queue B ] --> [ Fraud Service ]
 ```
+![1767515707897](image/66_sns/1767515707897.png)
 
 **Why?**
 
