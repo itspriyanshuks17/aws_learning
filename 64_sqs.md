@@ -1,46 +1,70 @@
 # 📨 Amazon SQS (Simple Queue Service)
 
-Amazon SQS is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications.
+Amazon SQS is a f**ully managed message queuing service** that enables you to **decouple and scale microservices**, distributed systems, and serverless applications.
 
 ## 📋 Table of Contents
 
-1. [Core Concepts](#1-core-concepts)
-2. [Standard vs FIFO Queues](#2-standard-vs-fifo-queues)
-3. [Key Configurations](#3-key-configurations)
-4. [Dead Letter Queue (DLQ)](#4-dead-letter-queue-dlq)
-5. [Exam Cheat Sheet](#5-exam-cheat-sheet)
+1. [Core Concepts & Decoupling](#1-core-concepts--decoupling)
+2. [SQS Between Application Tiers](#2-sqs-between-application-tiers)
+3. [Standard vs FIFO Queues](#3-standard-vs-fifo-queues)
+4. [Key Configurations](#4-key-configurations)
+5. [Dead Letter Queue (DLQ)](#5-dead-letter-queue-dlq)
+6. [Exam Cheat Sheet](#6-exam-cheat-sheet)
 
 ---
 
-## 1. Core Concepts
+## 1. Core Concepts & Decoupling
+
+### What is Decoupling?
+
+**Decoupling** means separating the components of a system so they can essentially run and scale **independently**.
+
+- **Coupled System**: If Component A sends data to Component B, and B is down, Component A fails or waits forever.
+- **Decoupled System**: Component A sends data to a "buffer" (SQS). It doesn't care if B is running or not.
 
 - **Producer**: Sends messages to the SQS queue.
 - **Consumer**: Polls (requests) messages from the SQS queue, processes them, and deletes them.
-- **De-coupling**: If the consumer crashes, messages persist in the queue until the consumer recovers.
 
 ```text
-[ Producer (Web App) ] --(SendMessage)--> [ SQS Queue ] --(ReceiveMessage)--> [ Consumer (EC2) ]
-                                                                                   |
-                                                                              (DeleteMessage)
-                                                                                   |
-                                                                                   v
-                                                                             [ Processed ]
+[ Producer ] --(Msg)--> [ SQS Queue ] --(Poll)--> [ Consumer ]
 ```
 
 ---
 
-## 2. Standard vs FIFO Queues
+## 2. SQS Between Application Tiers
+
+A common pattern is to decouple the **Web Tier** (Frontend) from the **Processing Tier** (Backend).
+
+### Scenario: Video Processing Site
+
+1.  **Web Tier**: Users upload videos. The web server saves the video to S3 and sends a message to SQS: "Process Video ID 123".
+2.  **SQS Queue**: Holds the message safely. It acts as a buffer.
+3.  **Processing Tier**: EC2 instances poll the queue. They pick up the message, process the video, and delete the message.
+
+**Benefits**:
+
+- **Scalability**: If 1,000 users upload at once, the Web Tier handles it instantly. The Queue fills up. The Processing Tier works at its own pace (e.g., 5 videos at a time).
+- **Architecture**: You can use Auto Scaling Groups (ASG) on the Processing Tier to scale based on the "Number of Messages in Queue".
+
+```text
+[ Web Server (Tier 1) ] -----> [ SQS Queue ] -----> [ Backend App (Tier 2) ]
+(Accepts Uploads Fast)       (Buffers Requests)      (Processes Slowly)
+```
+
+## ![1767513348258](image/64_sqs/1767513348258.png)
+
+## 3. Standard vs FIFO Queues
 
 | Feature        | Standard Queue                                       | FIFO Queue (First-In-First-Out)            |
 | :------------- | :--------------------------------------------------- | :----------------------------------------- |
 | **Ordering**   | **Best-effort** (Messages may arrive out of order).  | **Strictly preserved** (Exact order).      |
 | **Duplicates** | **At-least-once** (Rarely, a message happens twice). | **Exactly-once** processing.               |
 | **Throughput** | Unlimited.                                           | Limited (3,000 msg/sec with batching).     |
-| **Name**       | Any name (e.g., `my-queue`).                         | Must end in `.fifo` (e.g., `orders.fifo`). |
+| **Name**       | Any name (e.g.,`my-queue`).                          | Must end in `.fifo` (e.g., `orders.fifo`). |
 
 ---
 
-## 3. Key Configurations
+## 4. Key Configurations
 
 ### Visibility Timeout
 
@@ -56,7 +80,7 @@ Amazon SQS is a fully managed message queuing service that enables you to decoup
 
 ---
 
-## 4. Dead Letter Queue (DLQ)
+## 5. Dead Letter Queue (DLQ)
 
 If a message fails to process multiple times (e.g., bad format, bug in code), SQS moves it to a **Dead Letter Queue**.
 
@@ -65,7 +89,7 @@ If a message fails to process multiple times (e.g., bad format, bug in code), SQ
 
 ---
 
-## 5. Exam Cheat Sheet
+## 6. Exam Cheat Sheet
 
 - **Order Matters**: "Banking transactions needing exact order" -> **FIFO Queue**.
 - **Performance**: "Highest possible throughput, order doesn't matter" -> **Standard Queue**.
