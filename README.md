@@ -409,8 +409,13 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Use Case**: Using queues (SQS) or pub/sub (SNS) to handle traffic spikes without crashing services.
 
 - **[64. Amazon SQS Deep Dive](64_sqs.md)**
+
   - **Definition**: A fully managed message queuing service for decoupling microservices.
   - **Use Case**: Buffering requests from a web server before processing them on backend instances.
+
+- **[65. Amazon Kinesis Deep Dive](65_kinesis.md)**
+  - **Definition**: A service for real-time processing of streaming large data.
+  - **Use Case**: Ingesting clickstream logs or IoT telemetry for real-time dashboards (using Firehose or Analytics).
 
 ### Global Infrastructure & Networking
 
