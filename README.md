@@ -307,6 +307,11 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Definition**: A fully managed service for creating, publishing, maintaining, monitoring, and securing APIs.
   - **Use Case**: Creating a REST API frontend for Lambda functions or other AWS services.
 
+- **[71. Advanced Serverless (FaaS, XFaaS, XFBench)](71_advanced_serverless.md)**
+
+  - **Definition**: Advanced research concepts: Cross-Platform FaaS (XFaaS) and Benchmarking (XFBench).
+  - **Use Case**: Designing multi-cloud serverless architectures and performance testing.
+
   - REST vs HTTP vs WebSocket APIs
   - Endpoint Types (Edge, Regional, Private)
   - Security (Cognito, IAM, Lambda Authorizer)
