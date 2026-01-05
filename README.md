@@ -4,6 +4,12 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
 
 ## 📚 Table of Contents
 
+### ☁️ Introduction
+
+- **[00. Cloud Computing Concepts](00_cloud_concepts.md)**
+  - **Definition**: Foundational knowledge of Cloud Computing service models (IaaS, PaaS, SaaS) and deployment models.
+  - **Use Case**: Understanding the trade-offs between control (EC2) and convenience (Lambda/SaaS).
+
 ### 🔐 Core Services
 
 - **[01. IAM - Identity &amp; Access Management](01_iam.md)**
