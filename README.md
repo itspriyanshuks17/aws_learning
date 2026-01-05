@@ -6,9 +6,14 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
 
 ### ☁️ Introduction
 
-- **[00. Cloud Computing Concepts](00_cloud_concepts.md)**
-  - **Definition**: Foundational knowledge of Cloud Computing service models (IaaS, PaaS, SaaS) and deployment models.
-  - **Use Case**: Understanding the trade-offs between control (EC2) and convenience (Lambda/SaaS).
+- **[00a. Cloud Service Models (IaaS, PaaS, SaaS)](00_service_models.md)**
+
+  - **Definition**: Understanding IaaS (EC2), PaaS (Elastic Beanstalk), and SaaS (Salesforce) models.
+  - **Use Case**: Deciding between managing OS/Hardware (IaaS) vs focusing on code (PaaS).
+
+- **[00b. Cloud Deployment Models](00_deployment_models.md)**
+  - **Definition**: Understanding Public, Private, Hybrid, Multi-Cloud, and Community clouds.
+  - **Use Case**: Deciding where to host sensitive data (Private) vs scalable web apps (Public).
 
 ### 🔐 Core Services
 
