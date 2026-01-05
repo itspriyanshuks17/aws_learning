@@ -508,6 +508,12 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Definition**: A monitoring and observability service for DevOps engineers, developers, and site reliability engineers (SREs).
   - **Use Case**: Monitoring EC2 CPU usage, triggering alarms for high latency, and analyzing logs.
 
+### 🤖 Machine Learning
+
+- **[70. Amazon Rekognition Deep Dive](70_rekognition.md)**
+  - **Definition**: A fully managed machine learning service that automates image and video analysis (Face Detection, Content Moderation).
+  - **Use Case**: Identity verification (KYC), detecting inappropriate content in user uploads, or counting people in a store image.
+
 ### Architecture Patterns
 
 - **[46. AWS 3-Tier Web Architecture](46_architecture_3tier.md)**
