@@ -16,22 +16,50 @@ These models define **where** the infrastructure is located and **who** has acce
     - **Pros**: No CapEx, high scalability.
     - **Cons**: Less control over security/hardware.
 
+    ```text
+    [ User ] --(Internet)--> [ AWS / Azure / GCP (Public Cloud) ]
+    ```
+
 2.  **Private Cloud**: Resources are used exclusively by a single business or organization. Can be on-premise or hosted.
 
     - **Pros**: Complete control, security compliance.
     - **Cons**: High cost, maintenance responsibility.
 
+    ```text
+    [ User ] --(Internal Network)--> [ Corporate Data Center (Private Cloud) ]
+                             (Firewall)
+    ```
+
 3.  **Hybrid Cloud**: A combination of public and private clouds, connected by technology (e.g., AWS Direct Connect).
 
     - **Use Case**: Keep sensitive DB on-prem (Private) but run web app on AWS (Public).
+
+    ```text
+    [ Public Cloud (AWS) ] <--(Direct Connect / VPN)--> [ Private Cloud (On-Prem) ]
+    ```
 
 4.  **Multi-Cloud**: Using multiple public cloud providers (e.g., AWS + Azure + Google Cloud) simultaneously.
 
     - **Pros**: Avoid vendor lock-in, use "best of breed" services from each provider.
     - **Cons**: Complex management.
 
+    ```text
+           /--(Internet)--> [ AWS ]
+    [ User ] --(Internet)--> [ Azure ]
+           \--(Internet)--> [ GCP ]
+    ```
+
 5.  **Community Cloud**: Infrastructure shared by several organizations with common concerns (e.g., standards, security requirements).
+
     - **Use Case**: Banks sharing a secure financial cloud or government agencies using GovCloud.
+
+    ```text
+    [ Org A ] --\
+                 \
+    [ Org B ] ----> [ Community Cloud (Shared Infrastructure) ]
+                 /
+    [ Org C ] --/
+    ```
 
 ---
 
