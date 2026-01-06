@@ -1,6 +1,6 @@
 # 🤖 Amazon Lex - Deep Dive
 
-Amazon Lex is a service for building conversational interfaces into any application using voice and text. It uses the same deep learning engine as **Alexa**.
+Amazon Lex is a **service for building conversational interfaces into any application using voice and text**. It uses the same deep learning engine as **Alexa**.
 
 ## 📋 Table of Contents
 
@@ -23,12 +23,12 @@ Amazon Lex is a service for building conversational interfaces into any applicat
 
 ## 2. How it Works
 
-1.  **ASR (Automatic Speech Recognition)**: Converts speech to text (if voice input).
-2.  **NLU (Natural Language Understanding)**: Understands the _intent_ from the text.
-3.  **Dialog Management**: Prompts the user for missing information (Slots).
-    - _Lex_: "What city?"
-    - _User_: "New York"
-4.  **Fulfillment**: Sends data to Lambda to perform the action.
+1. **ASR (Automatic Speech Recognition)**: Converts speech to text (if voice input).
+2. **NLU (Natural Language Understanding)**: Understands the _intent_ from the text.
+3. **Dialog Management**: Prompts the user for missing information (Slots).
+   - _Lex_: "What city?"
+   - _User_: "New York"
+4. **Fulfillment**: Sends data to Lambda to perform the action.
 
 ---
 
@@ -44,8 +44,6 @@ Serverless Chatbot with logical fulfillment.
                                 v
                            [ Lambda ] --(Update DB)--> [ DynamoDB ]
 ```
-
----
 
 ## 4. Exam Cheat Sheet
 

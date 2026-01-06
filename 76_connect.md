@@ -1,6 +1,6 @@
-# 📞 Amazon Connect - Deep Dive
+#  📞 Amazon Connect - Deep Dive
 
-Amazon Connect is a self-service, omnichannel **cloud contact center** (call center) service. It is pay-as-you-go and setup takes minutes, not months.
+Amazon Connect is a self-service, omnichannel **cloud contact center** (call center) service. It is **pay-as-you-go** and **setup takes minutes**, not months.
 
 ## 📋 Table of Contents
 
@@ -43,7 +43,7 @@ Smart IVR with Voice ID and Sentiment Analysis.
                           [ Lambda ] --(Lookup CRM)--> [ DynamoDB / Salesforce ]
 ```
 
----
+---![1767721778838](image/76_connect/1767721778838.png)
 
 ## 4. Exam Cheat Sheet
 
