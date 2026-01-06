@@ -551,8 +551,13 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Use Case**: Setting up a call center in minutes, creating IVR flows with Lex integration.
 
 - **[77. Amazon Comprehend Deep Dive](77_comprehend.md)**
+
   - **Definition**: A natural language processing (NLP) service that finds insights and relationships in text.
   - **Use Case**: Sentiment analysis of customer reviews, PII detection, or document classification.
+
+- **[78. Amazon SageMaker Deep Dive](78_sagemaker.md)**
+  - **Definition**: A fully managed service to build, train, and deploy machine learning models.
+  - **Use Case**: Building custom ML models, data labeling (Ground Truth), or using AutoML (AutoPilot).
 
 ### Architecture Patterns
 
