@@ -536,8 +536,18 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Use Case**: Building speech-enabled apps, narration for videos, or educational platforms.
 
 - **[74. Amazon Translate Deep Dive](74_translate.md)**
+
   - **Definition**: A neural machine translation service that delivers fast, high-quality language translation.
   - **Use Case**: Localizing websites, translating real-time chat, or processing multi-lingual documents.
+
+- **[75. Amazon Lex Deep Dive](75_lex.md)**
+
+  - **Definition**: A service for building conversational interfaces (Chatbots) using voice and text (same engine as Alexa).
+  - **Use Case**: Customer service chatbots, automated Q&A bots.
+
+- **[76. Amazon Connect Deep Dive](76_connect.md)**
+  - **Definition**: A self-service, omnichannel cloud contact center.
+  - **Use Case**: Setting up a call center in minutes, creating IVR flows with Lex integration.
 
 ### Architecture Patterns
 
