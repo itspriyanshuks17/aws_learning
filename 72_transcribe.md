@@ -1,6 +1,6 @@
 # 🎙️ Amazon Transcribe - Deep Dive
 
-Amazon Transcribe is a fully managed **Automatic Speech Recognition (ASR)** service that **converts speech into text**. It uses deep learning models to **process audio files** and generate accurate transcripts.
+Amazon Transcribe is a fully managed **Automatic Speech Recognition (ASR)** service that **converts speech into text**. It uses **deep learning models** to **process audio files** and **generate accurate transcripts**.
 
 ## 📋 Table of Contents
 
@@ -56,3 +56,5 @@ A common pattern for searchable audio archives.
 - **Search Audio**: "Make video library searchable by content" -> Use **Transcribe** to get text, then index text in **OpenSearch**.
 - **Speaker ID**: "Identify different speakers in a conference call" -> **Speaker Identification** feature.
 - **PII Redaction**: Transcribe can automatically redact Personally Identifiable Information (Names, SSN) from transcripts.
+
+![1767719720046](image/72_transcribe/1767719720046.png)
