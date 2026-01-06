@@ -521,8 +521,13 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
 ### 🤖 Machine Learning
 
 - **[70. Amazon Rekognition Deep Dive](70_rekognition.md)**
+
   - **Definition**: A fully managed machine learning service that automates image and video analysis (Face Detection, Content Moderation).
   - **Use Case**: Identity verification (KYC), detecting inappropriate content in user uploads, or counting people in a store image.
+
+- **[72. Amazon Transcribe Deep Dive](72_transcribe.md)**
+  - **Definition**: A fully managed Automatic Speech Recognition (ASR) service that converts speech into text.
+  - **Use Case**: Generating subtitles for videos, transcribing call center recordings, or clinical documentation.
 
 ### Architecture Patterns
 
