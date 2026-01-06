@@ -526,8 +526,13 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Use Case**: Identity verification (KYC), detecting inappropriate content in user uploads, or counting people in a store image.
 
 - **[72. Amazon Transcribe Deep Dive](72_transcribe.md)**
+
   - **Definition**: A fully managed Automatic Speech Recognition (ASR) service that converts speech into text.
   - **Use Case**: Generating subtitles for videos, transcribing call center recordings, or clinical documentation.
+
+- **[73. Amazon Polly Deep Dive](73_polly.md)**
+  - **Definition**: A cloud service that turns text into lifelike speech (TTS).
+  - **Use Case**: Building speech-enabled apps, narration for videos, or educational platforms.
 
 ### Architecture Patterns
 
