@@ -54,3 +54,5 @@ Real-time chat translation/storage.
 - **Custom Terminology**: "Ensure Brand Names are NOT translated" -> Use **Custom Terminology** (CSVs).
 - **Format Preservation**: Translate supports HTML/Word docs while preserving formatting tags.
 - **Language ID**: If you don't know the source language, Translate can **automatically detect** it.
+
+![1767719892716](image/74_translate/1767719892716.png)

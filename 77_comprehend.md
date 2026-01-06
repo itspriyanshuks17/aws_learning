@@ -1,6 +1,6 @@
 # 🧠 Amazon Comprehend - Deep Dive
 
-Amazon Comprehend is a **Natural Language Processing (NLP)** service that uses **machine learning to find insights and relationships in text**. It's **fully managed**, so there are no servers to provision.
+Amazon Comprehend is a **Natural Language Processing (NLP)** service that uses **machine learning to find insights and relationships in text**. It's **fully managed**, so there are **no servers to provision**.
 
 ## 📋 Table of Contents
 

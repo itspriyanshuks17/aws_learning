@@ -1,6 +1,6 @@
 # 🧪 Amazon SageMaker - Deep Dive
 
-Amazon SageMaker is a fully managed service that provides every developer and data scientist with the ability to **build, train, and deploy** machine learning (ML) models quickly.
+Amazon SageMaker is a **fully managed service** that provides every developer and data scientist with the ability to **build, train, and deploy** **machine learning** (ML) **models** quickly.
 
 ## 📋 Table of Contents
 
@@ -13,7 +13,7 @@ Amazon SageMaker is a fully managed service that provides every developer and da
 
 ## 1. Core Capabilities (Build, Train, Deploy)
 
-SageMaker breaks down the ML process into three distinct steps:
+SageMaker **breaks down the ML process into three distinct steps**:
 
 ### A. Build
 
@@ -63,8 +63,6 @@ End-to-End ML Pipeline.
                                     v
                            [ SageMaker Endpoint ] <--(Predict)-- [ Application ]
 ```
-![1767724135070](image/78_sagemaker/1767724135070.png)
----
 
 ## 4. Exam Cheat Sheet
 
