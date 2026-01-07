@@ -566,8 +566,13 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Use Case**: Searching across S3, SharePoint, and Salesforce using natural language questions.
 
 - **[80. Amazon Personalize Deep Dive](80_personalize.md)**
+
   - **Definition**: A fully managed machine learning service for real-time personalized recommendations.
   - **Use Case**: "Customers who bought this also bought...", product ranking, and content recommendation.
+
+- **[81. Amazon Textract Deep Dive](81_textract.md)**
+  - **Definition**: A machine learning service that extracts text, handwriting, and data from scanned documents.
+  - **Use Case**: Digitizing invoices, extracting data from forms/tables, or processing identity documents (AnalyzeID).
 
 ### Architecture Patterns
 
