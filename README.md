@@ -587,8 +587,13 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Use Case**: Adding user sign-up/sign-in to mobile/web apps, and granting access to AWS resources.
 
 - **[84. AWS Directory Service Deep Dive](84_directory_service.md)**
+
   - **Definition**: Managed Microsoft Active Directory (AD) in the AWS Cloud.
   - **Use Case**: Authenticating Windows workloads, centralized credential management, and extending on-prem AD to cloud via trusts.
+
+- **[85. IAM Identity Center (AWS SSO) Deep Dive](85_iam_identity_center.md)**
+  - **Definition**: The successor to AWS SSO for centralized multi-account access.
+  - **Use Case**: Single Sign-On (SSO) for managing access to AWS accounts and business applications via Okta/Azure AD.
 
 ### Architecture Patterns
 
