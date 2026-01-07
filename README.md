@@ -561,8 +561,13 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Use Case**: Building custom ML models, data labeling (Ground Truth), or using AutoML (AutoPilot).
 
 - **[79. Amazon Kendra Deep Dive](79_kendra.md)**
+
   - **Definition**: An intelligent enterprise search service powered by machine learning.
   - **Use Case**: Searching across S3, SharePoint, and Salesforce using natural language questions.
+
+- **[80. Amazon Personalize Deep Dive](80_personalize.md)**
+  - **Definition**: A fully managed machine learning service for real-time personalized recommendations.
+  - **Use Case**: "Customers who bought this also bought...", product ranking, and content recommendation.
 
 ### Architecture Patterns
 
