@@ -22,7 +22,7 @@ AWS offers three main types of directory services:
 | **AWS Managed Microsoft AD**                                   | Enterprises needing**actual** AD features (Group Policy, Trusts, Kerberos).                  |
 | **AD Connector**                                               | Proxying directory requests to your**on-premises AD** (No data stored in cloud).             |
 | **Simple AD**                                                  | Small businesses needing a low-cost, Samba-based directory (Basic compatible features only). |
-| ![1767806118289](image/84_directory_service/1767806118289.png) |                                                                                              |
+                                                                                             |
 
 ---
 
@@ -32,12 +32,14 @@ AWS offers three main types of directory services:
 - **Trust Relationships**: You can create a "Trust" between your on-prem AD and AWS Managed AD. This allows on-prem users to log in to AWS resources using their existing credentials.
 - **Multi-Region Replication**: Supported for global reach.
 
+![1767806073204](image/84_directory_service/1767806073204.png)
 ## 3. AD Connector
 
 - **Directory Proxy**: It is **NOT** a directory itself. It is a gateway/proxy.
 - **How it works**: When a user logs in to AWS, AD Connector forwards the request to your on-premises AD controllers for verfication.
 - **Use Case**: You want to use existing on-prem credentials _without_ syncing users to the cloud or creating a trust.
 
+![1767806087886](image/84_directory_service/1767806087886.png)
 ---
 
 ## 4. Simple AD
@@ -47,6 +49,7 @@ AWS offers three main types of directory services:
 - **Limitations**: Does **NOT** support Trusts, multi-region replication, or seamless Single Sign-On (SSO) to many AWS applications.
 - **Use Case**: Small startups that need a directory to manage Linux/Windows EC2 instances but don't need advanced enterprise features.
 
+![1767806118289](image/84_directory_service/1767806118289.png) 
 ---
 
 ## 5. Exam Cheat Sheet
