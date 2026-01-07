@@ -577,8 +577,13 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
 ### 🛡️ Security, Identity & Compliance
 
 - **[82. AWS STS (Security Token Service) Deep Dive](82_sts.md)**
+
   - **Definition**: A web service that enables you to request temporary, limited-privilege credentials.
   - **Use Case**: Cross-account access, Identity Federation (SAML/Web Identity), and Mobile App authentication.
+
+- **[83. Amazon Cognito Deep Dive](83_cognito.md)**
+  - **Definition**: A service for user identity and data synchronization (User Pools & Identity Pools).
+  - **Use Case**: Adding user sign-up/sign-in to mobile/web apps, and granting access to AWS resources.
 
 ### Architecture Patterns
 
