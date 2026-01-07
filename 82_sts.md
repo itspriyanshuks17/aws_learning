@@ -52,7 +52,24 @@ Employees login to corporate Active Directory (AD).
 
 ---
 
-## 4. Exam Cheat Sheet
+## 4. Architecture Pattern
+
+**Cross-Account Role Assumption**
+
+```text
+[ Account A (Dev) ]                      [ Account B (Prod) ]
+      |                                          |
+   (User) --1. AssumeRole (ProdRole)--> [ AWS STS ]
+                                             |
+      <----2. Returns Temp Creds-------------+
+      |
+      |
+   (User + Temp Creds) --3. Access S3 Bucket--> [ S3 Bucket (Prod) ]
+```
+
+---
+
+## 5. Exam Cheat Sheet
 
 - **Temporary Access**: "Grant access for a short time" -> Use **STS**.
 - **Cross-Account**: "Access resources in another AWS account" -> **AssumeRole** via STS.
