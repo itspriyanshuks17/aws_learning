@@ -574,6 +574,12 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Definition**: A machine learning service that extracts text, handwriting, and data from scanned documents.
   - **Use Case**: Digitizing invoices, extracting data from forms/tables, or processing identity documents (AnalyzeID).
 
+### 🛡️ Security, Identity & Compliance
+
+- **[82. AWS STS (Security Token Service) Deep Dive](82_sts.md)**
+  - **Definition**: A web service that enables you to request temporary, limited-privilege credentials.
+  - **Use Case**: Cross-account access, Identity Federation (SAML/Web Identity), and Mobile App authentication.
+
 ### Architecture Patterns
 
 - **[46. AWS 3-Tier Web Architecture](46_architecture_3tier.md)**
