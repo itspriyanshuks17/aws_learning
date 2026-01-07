@@ -582,8 +582,13 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Use Case**: Cross-account access, Identity Federation (SAML/Web Identity), and Mobile App authentication.
 
 - **[83. Amazon Cognito Deep Dive](83_cognito.md)**
+
   - **Definition**: A service for user identity and data synchronization (User Pools & Identity Pools).
   - **Use Case**: Adding user sign-up/sign-in to mobile/web apps, and granting access to AWS resources.
+
+- **[84. AWS Directory Service Deep Dive](84_directory_service.md)**
+  - **Definition**: Managed Microsoft Active Directory (AD) in the AWS Cloud.
+  - **Use Case**: Authenticating Windows workloads, centralized credential management, and extending on-prem AD to cloud via trusts.
 
 ### Architecture Patterns
 
