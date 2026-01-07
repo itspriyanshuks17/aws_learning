@@ -1,11 +1,11 @@
 # 📄 Amazon Textract - Deep Dive
 
-Amazon Textract is a machine learning service that automatically **extracts text, handwriting, and data** (forms and tables) from scanned documents. It goes beyond simple OCR (Optical Character Recognition) by understanding the structure of the document.
+Amazon Textract is a machine learning service that automatically **extracts text, handwriting, and data** (forms and tables) from scanned documents. It goes beyond simple OCR (**Optical Character Recognition**) by understanding the structure of the document.
 
 ## 📋 Table of Contents
 
 1. [Core Capabilities](#1-core-capabilities)
-2. [Use Cases & Features](#2-use-cases--features)
+2. [Use Cases &amp; Features](#2-use-cases--features)
 3. [Architecture Pattern](#3-architecture-pattern)
 4. [Exam Cheat Sheet](#4-exam-cheat-sheet)
 
@@ -44,8 +44,6 @@ Automated Expense Processing.
                                   v
                             [ DynamoDB ]
 ```
-![1767777205636](image/81_textract/1767777205636.png)
----
 
 ## 4. Exam Cheat Sheet
 
