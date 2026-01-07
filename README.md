@@ -556,8 +556,13 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Use Case**: Sentiment analysis of customer reviews, PII detection, or document classification.
 
 - **[78. Amazon SageMaker Deep Dive](78_sagemaker.md)**
+
   - **Definition**: A fully managed service to build, train, and deploy machine learning models.
   - **Use Case**: Building custom ML models, data labeling (Ground Truth), or using AutoML (AutoPilot).
+
+- **[79. Amazon Kendra Deep Dive](79_kendra.md)**
+  - **Definition**: An intelligent enterprise search service powered by machine learning.
+  - **Use Case**: Searching across S3, SharePoint, and Salesforce using natural language questions.
 
 ### Architecture Patterns
 
