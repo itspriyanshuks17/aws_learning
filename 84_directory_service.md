@@ -17,11 +17,11 @@ AWS Directory Service **allows you to connect your AWS resources** (like EC2, Wo
 
 AWS offers three main types of directory services:
 
-| Type                                                         | Best For                                                                                     |
-| :----------------------------------------------------------- | :------------------------------------------------------------------------------------------- |
-| **AWS Managed Microsoft AD**                           | Enterprises needing**actual** AD features (Group Policy, Trusts, Kerberos).            |
-| **AD Connector**                                       | Proxying directory requests to your**on-premises AD** (No data stored in cloud).       |
-| **Simple AD**                                          | Small businesses needing a low-cost, Samba-based directory (Basic compatible features only). |
+| Type                                                           | Best For                                                                                     |
+| :------------------------------------------------------------- | :------------------------------------------------------------------------------------------- |
+| **AWS Managed Microsoft AD**                                   | Enterprises needing**actual** AD features (Group Policy, Trusts, Kerberos).                  |
+| **AD Connector**                                               | Proxying directory requests to your**on-premises AD** (No data stored in cloud).             |
+| **Simple AD**                                                  | Small businesses needing a low-cost, Samba-based directory (Basic compatible features only). |
 | ![1767806118289](image/84_directory_service/1767806118289.png) |                                                                                              |
 
 ---
@@ -38,7 +38,18 @@ AWS offers three main types of directory services:
 - **How it works**: When a user logs in to AWS, AD Connector forwards the request to your on-premises AD controllers for verfication.
 - **Use Case**: You want to use existing on-prem credentials _without_ syncing users to the cloud or creating a trust.
 
-## 4. Exam Cheat Sheet
+---
+
+## 4. Simple AD
+
+- **Samba-based**: It is NOT a real Microsoft AD. It is a standalone directory powered by Samba 4.
+- **Features**: Supports basic AD features like User accounts, Group memberships, and Joining EC2 instances to a domain.
+- **Limitations**: Does **NOT** support Trusts, multi-region replication, or seamless Single Sign-On (SSO) to many AWS applications.
+- **Use Case**: Small startups that need a directory to manage Linux/Windows EC2 instances but don't need advanced enterprise features.
+
+---
+
+## 5. Exam Cheat Sheet
 
 - **Active Directory**: "Need to use Group Policy Objects (GPO) or establish a Trust" -> **AWS Managed Microsoft AD**.
 - **Proxy/Gateway**: "Keep all users on-prem, just proxy authentication request" -> **AD Connector**.
