@@ -12,8 +12,13 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Use Case**: Deciding between managing OS/Hardware (IaaS) vs focusing on code (PaaS).
 
 - **[00b. Cloud Deployment Models](00_deployment_models.md)**
+
   - **Definition**: Understanding Public, Private, Hybrid, Multi-Cloud, and Community clouds.
   - **Use Case**: Deciding where to host sensitive data (Private) vs scalable web apps (Public).
+
+- **[86. Virtualization & Nitro System](86_virtualization.md)**
+  - **Definition**: Core technology enabling cloud computing (Hypervisors) and AWS-specific hardware offloading (Nitro).
+  - **Use Case**: Understanding why Bare Metal instances exist and how AWS isolates workloads.
 
 ### 🔐 Core Services
 
