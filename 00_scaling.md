@@ -15,12 +15,41 @@ Scalability is the ability of an application to accommodate growth in usage. In 
 
 ### Vertical vs Horizontal
 
-- **Vertical Scaling** (Scale Up/Down): Changing the _size_ of the instance (e.g., `t2.micro` -> `t2.large`).
-  - **Limitation**: Has a hardware limit; usually requires downtime.
-  - **Use Case**: Databases (RDS), Non-distributed apps.
-- **Horizontal Scaling** (Scale Out/In): Changing the _number_ of instances (e.g., 1 -> 5 instances).
-  - **Benefits**: Infinite scale, no downtime.
-  - **Use Case**: Web Apps, Stateless Services.
+| Feature      | Vertical Scaling (Scale Up)                    | Horizontal Scaling (Scale Out)                    |
+| :----------- | :--------------------------------------------- | :------------------------------------------------ |
+| **Concept**  | Adding power to an existing machine (CPU/RAM). | Adding more machines to the pool.                 |
+| **Downtime** | Usually requires a restart to upgrade size.    | **Zero downtime**. Engines are added dynamically. |
+| **Limit**    | Hard limit (Hardware capacity).                | **Infinite** (Cloud capacity).                    |
+| **Use Case** | Databases (RDS), Legacy Monoliths.             | Web Apps, Microservices, Distributed Systems.     |
+
+#### Architecture Diagrams
+
+**Vertical Scaling (Scale Up)**
+Moving from `t2.micro` to `t2.large`.
+
+```text
+[  Instance  ]      Use Case:
+|  t2.micro  |      Legacy Apps, SQL Databases
++------------+
+      |
+( Stop & Resize )
+      v
+[  INSTANCE  ]
+|  t2.large  |
++------------+
+```
+
+**Horizontal Scaling (Scale Out)**
+Adding more Identical Instances (ASG).
+
+```text
+       [ Load Balancer ]
+        /      |      \
+       /       |       \
++-------+  +-------+  +-------+
+| EC2 A |  | EC2 B |  | EC2 C |  Use Case:
++-------+  +-------+  +-------+  Web Apps, APIs
+```
 
 ### Virtual Machine Scale Sets (Azure Term)
 
