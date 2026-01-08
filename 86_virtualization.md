@@ -58,6 +58,43 @@ While Server Virtualization is the most common, there are several types used in 
 
 The **Hypervisor** (or VMM - Virtual Machine Monitor) is the software layer that sits between the hardware and the virtual machines.
 
+### Architecture Comparison
+
+**Type 1: Bare Metal (Native)**
+Sits directly on hardware. Used by AWS EC2.
+
+```text
++-----------------------+   +-----------------------+
+|      VM (Guest)       |   |      VM (Guest)       |
++-----------------------+   +-----------------------+
+            |                           |
++---------------------------------------------------+
+|               Hypervisor (Type 1)                 |
++---------------------------------------------------+
++---------------------------------------------------+
+|                 Physical Hardware                 |
++---------------------------------------------------+
+```
+
+**Type 2: Hosted**
+Sits on top of an OS. Used for local testing (VirtualBox).
+
+```text
++-----------------------+   +-----------------------+
+|      VM (Guest)       |   |      VM (Guest)       |
++-----------------------+   +-----------------------+
+            |                           |
++---------------------------------------------------+
+|               Hypervisor (Type 2)                 |
++---------------------------------------------------+
++---------------------------------------------------+
+|                  Host OS (Windows/Mac)            |
++---------------------------------------------------+
++---------------------------------------------------+
+|                 Physical Hardware                 |
++---------------------------------------------------+
+```
+
 | Type                    | Description                                | Performance                | Example                            |
 | :---------------------- | :----------------------------------------- | :------------------------- | :--------------------------------- |
 | **Type 1 (Bare Metal)** | Installs directly on hardware. No host OS. | **Highest** (Low overhead) | **AWS EC2 (Xen/KVM)**, VMware ESXi |
