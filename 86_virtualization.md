@@ -23,7 +23,38 @@ It is the process of creating a software-based (virtual) representation of somet
 
 ---
 
-## 2. Hypervisors
+## 2. Types of Virtualization
+
+While Server Virtualization is the most common, there are several types used in cloud computing:
+
+### A. Server Virtualization
+
+- **Definition**: Partitioning a physical server into smaller virtual servers.
+- **AWS Service**: **EC2** (Elastic Compute Cloud).
+
+### B. Network Virtualization
+
+- **Definition**: Decoupling bandwidth into independent channels, often called "Software Defined Networking" (SDN).
+- **AWS Service**: **VPC** (Virtual Private Cloud).
+
+### C. Storage Virtualization
+
+- **Definition**: Pooling physical storage from multiple network storage devices into what appears to be a single storage device.
+- **AWS Service**: **EBS** (Elastic Block Store), **S3**.
+
+### D. Desktop Virtualization
+
+- **Definition**: Simulating a user workstation so it can be accessed remotely.
+- **AWS Service**: **Amazon WorkSpaces**.
+
+### E. Application Virtualization
+
+- **Definition**: Encapsulating an application from the underlying OS.
+- **AWS Service**: **AppStream 2.0**.
+
+---
+
+## 3. Hypervisors
 
 The **Hypervisor** (or VMM - Virtual Machine Monitor) is the software layer that sits between the hardware and the virtual machines.
 
