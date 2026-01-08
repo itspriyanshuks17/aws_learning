@@ -4,19 +4,24 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
 
 ## 📚 Table of Contents
 
-### ☁️ Introduction
+### ☁️ Cloud Concepts & Foundation
 
-- **[00a. Cloud Service Models (IaaS, PaaS, SaaS)](00_service_models.md)**
+- **[00. AWS Shared Responsibility Model](00_shared_responsibility.md)**
 
-  - **Definition**: Understanding IaaS (EC2), PaaS (Elastic Beanstalk), and SaaS (Salesforce) models.
-  - **Use Case**: Deciding between managing OS/Hardware (IaaS) vs focusing on code (PaaS).
+  - **Definition**: Fundamental security model that defines what YOU are responsible for vs AWS.
+  - **Key**: Security **OF** the Cloud (AWS) vs Security **IN** the Cloud (Customer).
 
-- **[00b. Cloud Deployment Models](00_deployment_models.md)**
+- **[00. Deployment Models](00_deployment_models.md)**
 
   - **Definition**: Understanding Public, Private, Hybrid, Multi-Cloud, and Community clouds.
   - **Use Case**: Deciding where to host sensitive data (Private) vs scalable web apps (Public).
 
   - **Use Case**: Deciding where to host sensitive data (Private) vs scalable web apps (Public).
+
+- **[00a. Cloud Service Models (IaaS, PaaS, SaaS)](00_service_models.md)**
+
+  - **Definition**: Understanding IaaS (EC2), PaaS (Elastic Beanstalk), and SaaS (Salesforce) models.
+  - **Use Case**: Deciding between managing OS/Hardware (IaaS) vs focusing on code (PaaS).
 
 - **[00. Monolith vs Microservices](00_monolith_vs_microservices.md)**
 
