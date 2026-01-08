@@ -31,6 +31,37 @@ Understanding the difference between **Monolithic** and **Microservices** archit
   - **Tech Freedom**: Comparison Service can be Python, while Payment Service is Java.
 - **Cons**: Higher complexity in management, deployment, and monitoring.
 
+### Architecture comparison
+
+**Monolithic Architecture**
+All components in one server/process.
+
+```text
++---------------------------------------------------+
+|               Server / Instance                   |
+|  +---------------------------------------------+  |
+|  | [ UI ]  [ Business Logic ]  [ Data Layer ]  |  |
+|  +---------------------------------------------+  |
+|                       |                           |
+|                 [ Database ]                      |
++---------------------------------------------------+
+```
+
+**Microservices Architecture**
+Decoupled services communicating via APIs.
+
+```text
+      [ API Gateway ]  <-- Routes Traffic
+            /   \
+           /     \
++-------------+   +-------------+
+|  User Svc   |   |  Order Svc  | <-- Independent Scaling
+|  (Lambda)   |   |    (ECS)    |
++------+------+   +------+------+
+       |                 |
+  [ User DB ]       [ Order DB ]  <-- Decoupled Data
+```
+
 ---
 
 ## 3. AWS Enablers for Microservices
