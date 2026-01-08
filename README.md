@@ -33,6 +33,11 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Definition**: Apps that require session affinity (Sticky Sessions) or store data locally.
   - **Use Case**: Legacy applications, Databases, and Real-time gaming.
 
+- **[00. Scalability & Auto Scaling](00_scaling.md)**
+
+  - **Definition**: Concepts of Vertical vs Horizontal Scaling and AWS Auto Scaling Groups (ASG).
+  - **Use Case**: Automatically adjusting capacity to maintain steady performance at the lowest possible cost.
+
 - **[00. Virtualization & Nitro System](00_virtualization.md)**
   - **Definition**: Core technology enabling cloud computing (Hypervisors) and AWS-specific hardware offloading (Nitro).
   - **Use Case**: Understanding why Bare Metal instances exist and how AWS isolates workloads.
