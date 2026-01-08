@@ -16,6 +16,13 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Definition**: Understanding Public, Private, Hybrid, Multi-Cloud, and Community clouds.
   - **Use Case**: Deciding where to host sensitive data (Private) vs scalable web apps (Public).
 
+  - **Use Case**: Deciding where to host sensitive data (Private) vs scalable web apps (Public).
+
+- **[87. Monolith vs Microservices](87_monolith_vs_microservices.md)**
+
+  - **Definition**: Comparing tightly coupled (Monolith) vs loosely coupled (Microservices) architectures.
+  - **Use Case**: Understanding when to break down a legacy app into smaller, independent services (ECS, Lambda).
+
 - **[86. Virtualization & Nitro System](86_virtualization.md)**
   - **Definition**: Core technology enabling cloud computing (Hypervisors) and AWS-specific hardware offloading (Nitro).
   - **Use Case**: Understanding why Bare Metal instances exist and how AWS isolates workloads.
