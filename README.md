@@ -28,6 +28,11 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Definition**: Designing apps that store no local state, enabling infinite scaling.
   - **Use Case**: Building horizontally scalable web tiers using ELB and Auto Scaling Groups (ASG).
 
+- **[89. Stateful Applications](89_stateful_applications.md)**
+
+  - **Definition**: Apps that require session affinity (Sticky Sessions) or store data locally.
+  - **Use Case**: Legacy applications, Databases, and Real-time gaming.
+
 - **[86. Virtualization & Nitro System](86_virtualization.md)**
   - **Definition**: Core technology enabling cloud computing (Hypervisors) and AWS-specific hardware offloading (Nitro).
   - **Use Case**: Understanding why Bare Metal instances exist and how AWS isolates workloads.
