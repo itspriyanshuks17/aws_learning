@@ -18,22 +18,22 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
 
   - **Use Case**: Deciding where to host sensitive data (Private) vs scalable web apps (Public).
 
-- **[87. Monolith vs Microservices](87_monolith_vs_microservices.md)**
+- **[00. Monolith vs Microservices](00_monolith_vs_microservices.md)**
 
   - **Definition**: Comparing tightly coupled (Monolith) vs loosely coupled (Microservices) architectures.
   - **Use Case**: Understanding when to break down a legacy app into smaller, independent services (ECS, Lambda).
 
-- **[88. Stateless Applications](88_stateless_applications.md)**
+- **[00. Stateless Applications](00_stateless_applications.md)**
 
   - **Definition**: Designing apps that store no local state, enabling infinite scaling.
   - **Use Case**: Building horizontally scalable web tiers using ELB and Auto Scaling Groups (ASG).
 
-- **[89. Stateful Applications](89_stateful_applications.md)**
+- **[00. Stateful Applications](00_stateful_applications.md)**
 
   - **Definition**: Apps that require session affinity (Sticky Sessions) or store data locally.
   - **Use Case**: Legacy applications, Databases, and Real-time gaming.
 
-- **[86. Virtualization & Nitro System](86_virtualization.md)**
+- **[00. Virtualization & Nitro System](00_virtualization.md)**
   - **Definition**: Core technology enabling cloud computing (Hypervisors) and AWS-specific hardware offloading (Nitro).
   - **Use Case**: Understanding why Bare Metal instances exist and how AWS isolates workloads.
 
