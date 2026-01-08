@@ -62,11 +62,19 @@ Adding more Identical Instances (ASG).
 
 How do we decide _when_ to scale?
 
-1.  **Manual Scaling**: A human clicks "Update" to change capacity from 2 to 4. (Slow, risky).
-2.  **Dynamic Scaling** (Reactive): Scale based on **Metrics** (CloudWatch).
+### 1. Manual Scaling (Direct Scaling)
+
+- **Definition**: You manually adjust the **Desired Capacity** of the Auto Scaling Group.
+- **Action**: Manually updating the ASG setting from `2` to `5` instances.
+- **Use Case**: Known events where you want immediate control (e.g., "We are releasing a feature right now and want to warm up capacity").
+- **CLI Example**: `aws autoscaling set-desired-capacity --auto-scaling-group-name my-asg --desired-capacity 5`
+
+### 2. Dynamic Scaling (Reactive)
+
     - **Target Tracking**: "Keep CPU at 50%". (Simplest & Recommended).
     - **Step Scaling**: "If CPU > 70%, add 2 units. If > 85%, add 4 units."
     - **Simple Scaling**: "If CPU > 70%, add 1 unit."
+
 3.  **Scheduled Scaling**: Scale based on time.
     - _Example_: "Every Monday at 9 AM, scale to 10 instances."
 4.  **Predictive Scaling**: Uses Machine Learning to predict traffic based on history.
