@@ -69,6 +69,17 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
 
 - **[03. EC2 - Elastic Compute Cloud](03_ec2.md)**
 
+  - **Definition**: Resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers.
+  - **Use Case**: Hosting websites, applications, and databases.
+
+  - Launching instances (Linux, Windows, Mac)
+  - Security Groups and Key Pairs
+  - Elastic IP addresses and Placement Groups
+
+- **[00. Load Balancers (ELB)](00_load_balancers.md)**
+
+  - **Definition**: Distributing incoming application traffic across multiple targets (ALB vs NLB vs GWLB).
+  - **Use Case**: High Availability, Fault Tolerance, and Scaling web applications.
   - **Definition**: A web service that provides secure, resizable compute capacity in the cloud.
   - **Use Case**: Hosting web applications, databases, and backend servers.
 
