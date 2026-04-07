@@ -1,6 +1,11 @@
 # 📦 Amazon ECS - Deep Dive
 
-Amazon ECS (Elastic Container Service) is a fully managed **Container Orchestration** service. It **helps you run, stop, and manage Docker containers on a cluster**.
+# 📦 Amazon ECS (Elastic Container Service)
+
+Amazon ECS is a fully managed container orchestration service that makes it easy for you to run, stop, and manage Docker containers on a cluster.  
+It integrates with other AWS services such as Elastic Load Balancing, IAM, and CloudWatch.
+
+![ECS Architecture](image/36_ecs/architecture.png)
 
 ## 📋 Table of Contents
 
