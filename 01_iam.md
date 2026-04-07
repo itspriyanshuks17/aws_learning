@@ -1,8 +1,9 @@
 # AWS IAM (Identity and Access Management)
 
-## 🔹 What is IAM?
 AWS IAM is a **global security service** that enables you to securely control **who can access your AWS resources** and **what actions they can perform**.  
 It is the **backbone of AWS security**, allowing you to define authentication (who can log in) and authorization (what they can do).
+
+![IAM Architecture](image/01_iam/architecture.png)
 
 ✅ IAM is **free** (you only pay for the resources accessed).  
 ✅ IAM is **global** (configured once for the whole AWS account, not region-specific).  
