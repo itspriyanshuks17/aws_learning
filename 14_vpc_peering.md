@@ -1,6 +1,10 @@
-# 🌐 VPC Peering Connection - Complete Lab Guide
+# 🌐 VPC Peering - Deep Dive & Lab
 
-This detailed guide walks students through every click in the AWS Console to create two VPCs, configure public and private subnets, route tables, internet/NAT gateways, launch EC2 instances, set up VPC Peering, update routes, modify security groups, and test connectivity.
+VPC Peering is a networking connection between two VPCs that enables you to route traffic between them using private IPv4 or IPv6 addresses.  
+Instances in either VPC can communicate with each other as if they are within the same network.
+
+![VPC Peering Architecture](image/14_vpc_peering/architecture.png)
+*(Note: High-resolution architecture diagram coming soon)*
 
 ---
 
