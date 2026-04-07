@@ -12,6 +12,10 @@
 - ✅ ELB - Elastic Load Balancer
 - ✅ Security Groups
 
+### App & Desktop Services (10% coverage)
+
+- ✅ Amazon WorkSpaces - DaaS solution
+
 ## ❌ Critical Missing Services (60% of exam content)
 
 ### Database Services (High Priority - 15% of exam)
