@@ -1,6 +1,9 @@
-# 🗄️ AWS Database Services - Deep Dive Notes
+# 🗄️ AWS Databases - Overview
 
-This guide provides comprehensive notes on AWS Database services, essential for the Solutions Architect Associate (SAA-C03) exam and real-world implementation.
+AWS offers a broad range of purpose-built databases for all your application needs.  
+Choosing the right database depends on your specific workload, performance requirements, and data structure.
+
+![Databases Architecture](image/20_databases/architecture.png)
 
 ## 📋 Table of Contents
 
