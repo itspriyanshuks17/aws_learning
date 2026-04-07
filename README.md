@@ -638,6 +638,10 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Definition**: The successor to AWS SSO for centralized multi-account access.
   - **Use Case**: Single Sign-On (SSO) for managing access to AWS accounts and business applications via Okta/Azure AD.
 
+- **[86. Amazon WorkSpaces Deep Dive](86_amazon_workspaces.md)**
+  - **Definition**: Fully managed, secure Desktop-as-a-Service (DaaS) solution.
+  - **Use Case**: Provisioning virtual Windows and Linux desktops for employees and contractors.
+
 ### Architecture Patterns
 
 - **[46. AWS 3-Tier Web Architecture](46_architecture_3tier.md)**
