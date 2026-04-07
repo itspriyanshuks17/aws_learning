@@ -15,6 +15,11 @@
 ### App & Desktop Services (10% coverage)
 
 - ✅ Amazon WorkSpaces - DaaS solution
+- ✅ Amazon AppStream 2.0 - Application streaming
+
+### IoT Services (5% coverage)
+
+- ✅ AWS IoT Core - Managed IoT connectivity
 
 ## ❌ Critical Missing Services (60% of exam content)
 
