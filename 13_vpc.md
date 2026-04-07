@@ -1,8 +1,13 @@
 # 🧩 AWS VPC (Virtual Private Cloud)
 
-Amazon **Virtual Private Cloud (VPC)** allows you to **logically isolate a section of the AWS Cloud** where you can launch AWS resources (like EC2, RDS, ELB) in a **secure and controlled network environment**.
+# 🌐 Amazon VPC (Virtual Private Cloud)
 
-It’s your **own virtual data center** in AWS — fully customizable with subnets, IP ranges, route tables, firewalls, and gateways.
+Amazon VPC lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define.  
+You have complete control over your virtual networking environment, including selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways.
+
+![VPC Architecture](image/13_vpc/architecture.png)
+
+## 📋 Table of Contents
 
 ---
 
