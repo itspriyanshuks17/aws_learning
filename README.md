@@ -617,6 +617,12 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
   - **Definition**: A machine learning service that extracts text, handwriting, and data from scanned documents.
   - **Use Case**: Digitizing invoices, extracting data from forms/tables, or processing identity documents (AnalyzeID).
 
+### 🌐 Internet of Things (IoT)
+
+- **[88. AWS IoT Core Deep Dive](88_aws_iot_core.md)**
+  - **Definition**: Managed cloud service that lets connected devices interact with cloud applications and other devices.
+  - **Use Case**: Connecting smart home devices, industrial sensors, and telemetry data for real-time processing.
+
 ### 🛡️ Security, Identity & Compliance
 
 - **[82. AWS STS (Security Token Service) Deep Dive](82_sts.md)**
@@ -641,6 +647,10 @@ A comprehensive, hands-on guide to Amazon Web Services (AWS) fundamentals coveri
 - **[86. Amazon WorkSpaces Deep Dive](86_amazon_workspaces.md)**
   - **Definition**: Fully managed, secure Desktop-as-a-Service (DaaS) solution.
   - **Use Case**: Provisioning virtual Windows and Linux desktops for employees and contractors.
+
+- **[87. Amazon AppStream 2.0 Deep Dive](87_amazon_appstream_2_0.md)**
+  - **Definition**: Fully managed non-persistent application streaming service.
+  - **Use Case**: Streaming specific applications to a web browser without a full desktop.
 
 ### Architecture Patterns
 
