@@ -1,6 +1,8 @@
 # 🐳 Docker Fundamentals for AWS
 
-Docker is a platform for developing, shipping, and running applications in **containers**. It is the foundation for AWS container services like **ECS** (Elastic Container Service) and **EKS** (Elastic Kubernetes Service).
+Docker is an open-source platform that automates the deployment of applications as portable, self-sufficient containers that can run on the cloud or on-premises.
+
+![Docker Architecture](image/35_docker/architecture.png)
 
 ## 📋 Table of Contents
 
