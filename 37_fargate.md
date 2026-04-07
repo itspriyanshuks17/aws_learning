@@ -1,6 +1,9 @@
-# 👻 AWS Fargate - Deep Dive
+# 🚀 AWS Fargate - Deep Dive
 
-AWS Fargate is a **Serverless Compute Engine** for containers. It works with both Amazon ECS and Amazon EKS. Fargate removes the need to provision and manage servers, letting you specify and pay for resources per application, and improving security through application isolation by design.
+AWS Fargate is a serverless, pay-as-you-go compute engine that lets you focus on building applications without managing servers.  
+It works with both Amazon ECS and Amazon EKS.
+
+![Fargate Architecture](image/37_fargate/architecture.png)
 
 ## 📋 Table of Contents
 
