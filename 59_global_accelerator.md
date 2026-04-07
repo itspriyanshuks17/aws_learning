@@ -2,6 +2,9 @@
 
 AWS Global Accelerator is a **networking service** that **improves** the **availability, performance**, and **security** of your applications using the **AWS global network**.
 
+![Global Accelerator Architecture](image/59_global_accelerator/architecture.png)
+*(Note: High-resolution architecture diagram coming soon)*
+
 ## 📋 Table of Contents
 
 1. [Core Concepts](#1-core-concepts)
