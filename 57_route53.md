@@ -1,6 +1,9 @@
-![1766682006586](image/57_route53/1766682006586.png)# 🚦 Amazon Route 53 - Deep Dive
+# 🚦 Amazon Route 53 - Deep Dive
 
 Amazon Route 53 is a highly available and scalable **cloud Domain Name System (DNS) web service**. It translates human readable names (`google.com`) into numeric IP addresses (`192.0.2.1`).
+
+![Route 53 Architecture](image/57_route53/architecture.png)
+*(Note: High-resolution architecture diagram coming soon)*
 
 ## 📋 Table of Contents
 
