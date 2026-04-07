@@ -1,7 +1,10 @@
-# 🧭 AWS Route Tables
+# 🧭 AWS Route Tables - Deep Dive
 
-A **Route Table** in AWS defines how **network traffic is directed** within your **VPC (Virtual Private Cloud)**.  
-It acts like a **map** that tells each subnet **where to send the traffic** based on destination IP addresses.
+A Route Table in AWS defines how network traffic is directed within your VPC (Virtual Private Cloud).  
+It acts like a map that tells each subnet where to send traffic based on destination IP addresses.
+
+![Route Tables Architecture](image/15_route_tables/architecture.png)
+*(Note: High-resolution architecture diagram coming soon)*
 
 ---
 
