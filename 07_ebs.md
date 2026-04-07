@@ -3,6 +3,8 @@
 Amazon **Elastic Block Store (EBS)** is a **block storage service** designed for use with Amazon EC2 instances.  
 It provides **persistent, high-performance, and low-latency storage** that behaves like a physical hard drive attached to your virtual machine.
 
+![EBS Architecture](image/07_ebs/architecture.png)
+
 > 📝 NOTE: EBS and EC2 must be in the same Availability Zone (AZ).
 
 ---
