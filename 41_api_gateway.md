@@ -1,8 +1,9 @@
-# 🚪 AWS API Gateway - Deep Dive
+# 🚪 Amazon API Gateway - Deep Dive
 
-Amazon API Gateway is a **fully managed service** that makes it easy for developers **to create, publish, maintain, monitor, and secure APIs at any scale**. It acts as the "***Front Door***" for applications **to access data, business logic, or functionality from your backend services**.
+Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale.  
+It acts as a "front door" for applications to access data, business logic, or functionality from your backend services.
 
-![API Gateway](images/api_gateway.png)
+![API Gateway Architecture](image/41_api_gateway/architecture.png)
 
 ## 📋 Table of Contents
 
