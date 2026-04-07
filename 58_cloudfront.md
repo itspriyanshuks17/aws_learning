@@ -2,6 +2,9 @@
 
 Amazon CloudFront is a fast **Content Delivery Network (CDN)** service that **securely delivers data, videos, applications, and APIs to customers globally** with **low latency, high transfer speeds, within a developer-friendly environment.**
 
+![CloudFront Architecture](image/58_cloudfront/architecture.png)
+*(Note: High-resolution architecture diagram coming soon)*
+
 ## 📋 Table of Contents
 
 1. [Core Concepts](#1-core-concepts)
